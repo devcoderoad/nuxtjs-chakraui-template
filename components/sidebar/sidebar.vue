@@ -1,62 +1,65 @@
 <template>
-  <c-box min-h="100vh">
-    <c-box on-close="onClose" display="{ base: 'none', md: 'block' }">
-      <c-box>
-        <Flex
-          h="20"
-          align-items="center"
-          mx="8"
-          justify-content="space-between"
-        >
-          <Text font-size="2xl" font-family="monospace" font-weight="bold">
-            Logo
-          </Text>
-          <!-- <CloseButton :onClick="" /> -->
-        </Flex>
-        <Link href="#">
-          <Flex align="center" p="4" mx="4">
-            <Icon
-              mr="4"
-              font-size="16"
-              :group-hover="{ color: 'white' }"
-              as="{icon}"
-            />
+  <div>
+    <CBox min-h="100vh">
+      <CBox on-close="onClose" display="{ base: 'none', md: 'block' }">
+        <CBox>
+          <Flex
+            h="20"
+            align-items="center"
+            mx="8"
+            justify-content="space-between"
+          >
+            <Text font-size="2xl" font-family="monospace" font-weight="bold">
+              Logo
+            </Text>
+            <!-- <CloseButton :onClick="" /> -->
           </Flex>
-        </Link>
-      </c-box>
-      <c-drawer
-        isOpen="isOpen"
-        placement="right"
-        :on-close="close"
-        :initialFocusRef="() => $refs.inputInsideModal"
-      >
-        <c-drawer-overlay />
-        <c-drawer-content>
-          <c-drawer-close-button />
-          <c-drawer-header>Create your account</c-drawer-header>
+          <Link href="#">
+            <Flex align="center" p="4" mx="4">
+              <Icon
+                mr="4"
+                font-size="16"
+                :group-hover="{ color: 'white' }"
+                as="{icon}"
+              />
+            </Flex>
+          </Link>
+        </CBox>
+        <CDrawer
+          isOpen="isOpen"
+          placement="right"
+          :on-close="close"
+          :initialFocusRef="() => $refs.inputInsideModal"
+        >
+          <CDrawerOverlay />
+          <CDrawerContent>
+            <CDrawerCloseButton />
+            <CDrawer-header>Create your account</CDrawer-header>
 
-          <c-drawer-body>
-            <c-input ref="inputInsideModal" placeholder="Type here..." />
-          </c-drawer-body>
+            <CDrawerBody>
+              <CInput ref="inputInsideModal" placeholder="Type here..." />
+            </CDrawerBody>
 
-          <c-drawer-footer>
-            <c-button variant="outline" mr="3" @click="isOpen = false"
-              >Cancel</c-button
-            >
-            <c-button variant-color="blue">Save</c-button>
-          </c-drawer-footer>
-        </c-drawer-content>
-      </c-drawer>
-      <MobileNav :display="{ base: 'flex', md: 'none' }" on-open="{onOpen}" />
-      <c-box ml={{ base: 0, md: 60 }} p="4">
-      {{ children }}
-    </c-box>
-  </c-box>
+            <CDrawerFooter>
+              <CButton variant="outline" mr="3" @click="isOpen = false"
+                >Cancel</CButton
+              >
+              <CButton variant-color="blue">Save</CButton>
+            </CDrawerFooter>
+          </CDrawerContent>
+        </CDrawer>
+        <MobileNav :display="{ base: 'flex', md: 'none' }" on-open="{onOpen}" />
+        <!-- <CBox ml={{ base: 0, md: 60 }} p="4"> -->
+        {{ children }}
+        <!-- </CBox> -->
+      </CBox>
+    </CBox>
+  </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-
+import { CBox, CDrawer, CDrawerContent, CButton } from '@chakra-ui/vue'
 // const LinkItems: Array<LinkItemProps> = [
 //   { name: 'Home', icon: FiHome },
 //   { name: 'Trending', icon: FiTrendingUp },
@@ -67,6 +70,12 @@ import Vue from 'vue'
 
 export default Vue.extend({
   name: 'DefaultSidebar',
+  components: {
+    CBox,
+    CDrawer,
+    CDrawerContent,
+    CButton,
+  },
   props: {
     children: { type: String, default: () => '' },
   },

@@ -21,7 +21,7 @@ export default {
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -60,6 +60,17 @@ export default {
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
+
+  chakra: {
+    extendTheme: {
+      icons: {
+        iconPack: 'fa',
+      },
+    },
+    icons: {
+      iconPack: 'fa',
+    },
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},

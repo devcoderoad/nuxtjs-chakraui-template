@@ -76,6 +76,40 @@
           </CModalContent>
         </CModal>
       </CFlex>
+      <CBox d="flex" justify-content="center" justify="center" mx="auto">
+        <CStack spacing="5" is-inline>
+          <c-box
+            :p="5"
+            shadow="xl"
+            border-width="1px"
+            borderRadius="10"
+            :_hover="{ bg: 'gray.100' }"
+          >
+            <c-heading>See the Vue</c-heading>
+            <c-text :mt="4">Vue makes front-end development a breeze.</c-text>
+          </c-box>
+          <c-box
+            :p="5"
+            shadow="xl"
+            border-width="1px"
+            borderRadius="10"
+            :_hover="{ bg: 'gray.100' }"
+          >
+            <c-heading>Go Nuxt!</c-heading>
+            <c-text :mt="4">Nuxt makes writing Vue even easier.</c-text>
+          </c-box>
+          <c-box
+            :p="5"
+            shadow="xl"
+            border-width="1px"
+            borderRadius="10"
+            :_hover="{ bg: 'gray.100' }"
+          >
+            <c-heading>Go Nuxt!</c-heading>
+            <c-text :mt="4">Nuxt makes writing Vue even easier.</c-text>
+          </c-box>
+        </CStack>
+      </CBox>
     </CBox>
   </div>
 </template>
