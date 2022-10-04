@@ -75,46 +75,49 @@
             <CModalCloseButton @click="showModal = false" />
           </CModalContent>
         </CModal>
+        <CBox d="flex" justify-content="center" justify="center" mx="auto">
+          <CStack spacing="5" is-inline>
+            <CBox
+              :p="5"
+              shadow="xl"
+              border-width="1px"
+              border-radius="10"
+              :_hover="{ bg: 'gray.100', shadow: 'lg' }"
+            >
+              <CHeading>See the Vue</CHeading>
+              <CText :mt="4">Vue makes front-end development a breeze.</CText>
+            </CBox>
+            <CBox
+              :p="5"
+              shadow="xl"
+              border-width="1px"
+              border-radius="10"
+              :_hover="{ bg: 'gray.100', shadow: 'lg' }"
+            >
+              <CHeading>Go Nuxt!</CHeading>
+              <CText :mt="4">Nuxt makes writing Vue even easier.</CText>
+            </CBox>
+            <CBox
+              :p="5"
+              shadow="xl"
+              border-width="1px"
+              border-radius="10"
+              :_hover="{ bg: 'gray.100', shadow: 'lg' }"
+            >
+              <!-- <CHeading>Go Nuxt!</CHeading> -->
+              <CLink href="/dashboard" pass-href
+                ><CHeading>Go to Dashboard</CHeading></CLink
+              >
+              <CText :mt="4">Nuxt makes writing Vue even easier.</CText>
+            </CBox>
+          </CStack>
+        </CBox>
       </CFlex>
-      <CBox d="flex" justify-content="center" justify="center" mx="auto">
-        <CStack spacing="5" is-inline>
-          <c-box
-            :p="5"
-            shadow="xl"
-            border-width="1px"
-            borderRadius="10"
-            :_hover="{ bg: 'gray.100' }"
-          >
-            <c-heading>See the Vue</c-heading>
-            <c-text :mt="4">Vue makes front-end development a breeze.</c-text>
-          </c-box>
-          <c-box
-            :p="5"
-            shadow="xl"
-            border-width="1px"
-            borderRadius="10"
-            :_hover="{ bg: 'gray.100' }"
-          >
-            <c-heading>Go Nuxt!</c-heading>
-            <c-text :mt="4">Nuxt makes writing Vue even easier.</c-text>
-          </c-box>
-          <c-box
-            :p="5"
-            shadow="xl"
-            border-width="1px"
-            borderRadius="10"
-            :_hover="{ bg: 'gray.100' }"
-          >
-            <c-heading>Go Nuxt!</c-heading>
-            <c-text :mt="4">Nuxt makes writing Vue even easier.</c-text>
-          </c-box>
-        </CStack>
-      </CBox>
     </CBox>
   </div>
 </template>
 
-<script lang="js">
+<script>
 import {
   CBox,
   CButton,
@@ -130,7 +133,10 @@ import {
   CModalCloseButton,
   CIconButton,
   CFlex,
+  CStack,
   CHeading,
+  CText,
+  CLink,
 } from '@chakra-ui/vue'
 
 export default {
@@ -150,7 +156,10 @@ export default {
     CModalCloseButton,
     CIconButton,
     CFlex,
+    CStack,
     CHeading,
+    CText,
+    CLink,
   },
   inject: ['$chakraColorMode', '$toggleColorMode'],
   data() {
@@ -170,22 +179,18 @@ export default {
   },
   computed: {
     colorMode() {
-      const vm = this
-      return vm.$chakraColorMode()
+      return this.$chakraColorMode()
     },
     theme() {
-      const vm = this
-      return vm.$chakraTheme()
+      return this.$chakraTheme()
     },
     toggleColorMode() {
-      const vm = this
-      return vm.$toggleColorMode
+      return this.$toggleColorMode
     },
   },
   methods: {
     showToast() {
-      const vm = this
-      vm.$toast({
+      this.$toast({
         title: 'Account created.',
         description: "We've created your account for you.",
         status: 'success',

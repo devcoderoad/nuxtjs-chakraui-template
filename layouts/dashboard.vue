@@ -4,81 +4,43 @@
       <CColorModeProvider>
         <CBox font-family="body" as="main" minH="100vh" role="dashboard">
           <CReset />
-          <CDrawer
-            :autoFocus="false"
-            :isOpen="isDrawerOpen"
-            :onClose="onClose"
-            :returnFocusOnClose="false"
-            :onOverlayClick="isDrawerOpen"
-            placement="left"
+          <MDrawer
+            :cIsDrawerOpen="isDrawerOpen"
+            :onOpen="onMobileOpen"
+            @toggleDrawer="toggleDrawer"
+          />
+          <CBox
+            border-bottom-width="1px"
+            border-bottom-color="gray"
+            background-color="transparent"
           >
-            <CDrawerContent>
-              <CBox
-                transition="3s ease"
-                borderRight="1px"
-                pos="fixed"
-                h="full"
-                :w="{ base: 'full' }"
-              >
-                <CFlex
-                  h="100vh"
-                  w="100%"
-                  alignItems="center"
-                  mx="8"
-                  justifyContent="space-between"
-                >
-                  <CStack :spacing="5">
-                    <CBox :p="5" shadow="md" border-width="1px">
-                      <CText>Vue makes front-end development a breeze.</CText>
-                    </CBox>
-                    <CBox :p="5" shadow="md" border-width="1px">
-                      <CText>Nuxt makes writing Vue even easier.</CText>
-                    </CBox>
-                    <CBox :p="5" shadow="md" border-width="1px">
-                      <CText>Nuxt makes writing Vue even easier.</CText>
-                    </CBox>
-                    <CBox :p="5" shadow="md" border-width="1px">
-                      <CText>Nuxt makes writing Vue even easier.</CText>
-                    </CBox>
-                    <CBox :p="5" shadow="md" border-width="1px">
-                      <CText>Nuxt makes writing Vue even easier.</CText>
-                    </CBox>
-                  </CStack>
-                  <CDrawerCloseButton @click="toggleDrawer" />
-                </CFlex>
-              </CBox>
-            </CDrawerContent>
-          </CDrawer>
-          <CBox :onOpen="onMobileOpen">
             <CFlex
               :ml="{ base: 0, md: 60 }"
               :px="{ base: 4, md: 4 }"
               height="20"
               align-items="center"
-              border-bottom-width="1px"
-              border-bottom-color="red"
               :justify-content="{ base: 'space-between', md: 'flex-end' }"
             >
-              <CButton
+              <CIconButton
                 display="{ base: 'flex', md: 'none' }"
                 variant="outline"
-                aria-label="open menu"
-                variant-color="blue"
-                icon="search"
+                aria-label="Menu"
+                variant-color="green"
+                icon="bars"
                 @click="toggleDrawer"
               >
-                :
-              </CButton>
+              </CIconButton>
               <CStack :spacing="{ base: '0', md: '6' }">
                 <CFlex align-items="center">
                   <CMenu>
                     <CMenuButton
                       transition="all 0.3s"
                       :focus="{ boxShadow: 'none' }"
-                      p="2"
+                      p="0"
                     >
                       <CAvatar
-                        size="sm"
+                        size="xs"
+                        m="1"
                         src="https://images.unsplash.com/photo-1619946794135-5bc917a27793?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9"
                       />
                     </CMenuButton>
@@ -110,9 +72,8 @@ import {
   CReset,
   CBox,
   CFlex,
-  CDrawer,
-  CDrawerContent,
-  CButton,
+  // CButton,
+  CIconButton,
   CMenu,
   CMenuList,
   CMenuItem,
@@ -122,6 +83,9 @@ import {
   CStack,
 } from '@chakra-ui/vue'
 
+/* Components */
+import MDrawer from '@/components/drawer/MDrawer'
+
 export default {
   name: 'DashboardLayout',
   components: {
@@ -130,23 +94,26 @@ export default {
     CReset,
     CBox,
     CFlex,
-    CDrawer,
-    CDrawerContent,
     CStack,
     CMenu,
     CMenuList,
     CMenuItem,
     CMenuDivider,
     CMenuButton,
-    CButton,
+    // CButton,
+    CIconButton,
     CAvatar,
+    /* Components */
+    MDrawer,
   },
   // inject: ['$chakraColorMode', '$toggleColorMode'],
   data() {
-    // console.log(this)
+    // console.log(this.thistest)
+    // console.log(this.isDrawerOpen)
     return {
       isDrawerOpen: false,
       onMobileOpen: false,
+      thistest: '',
       mainStyles: {
         dark: {
           bg: 'gray.700',
@@ -174,14 +141,15 @@ export default {
   //   },
   // },
   methods: {
-    onClose() {
-      return console.log(this.isDrawerOpen)
-    },
-    onDrawer() {
-      const vm = this
-      return console.log(vm.isDrawerOpen)
-    },
+    // onClose() {
+    //   return this.$emit('enlarge-text')
+    // },
+    // onDrawer() {
+    //   const vm = this
+    //   return console.log(vm.isDrawerOpen)
+    // },
     toggleDrawer() {
+      // console.log(this.isDrawerOpen)
       const vm = this
       return (vm.isDrawerOpen = !vm.isDrawerOpen)
     },

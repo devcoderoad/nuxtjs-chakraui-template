@@ -1,10 +1,15 @@
+import * as icons from './utils/icons'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxtjs-chakraui-template',
+    title: 'nuxtjs-chakraui-template2',
+    htmlAttrs: {
+      lang: 'en',
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -25,8 +30,8 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/typescript
-    '@nuxt/typescript-build',
+    // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
   ],
@@ -39,8 +44,6 @@ export default {
     '@nuxtjs/emotion',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
@@ -51,25 +54,44 @@ export default {
     baseURL: '/',
   },
 
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
-  pwa: {
-    manifest: {
-      lang: 'en',
-    },
-  },
-
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
+  /**
+   * Add extend the plugin options under the `chakra` key.
+   **/
   chakra: {
-    extendTheme: {
-      icons: {
-        iconPack: 'fa',
+    icons: {
+      // Here we state that we use `fa`
+      // icons library for Chakra's
+      // internal icon parser
+      iconPack: 'fa',
+      iconSet: {
+        ...icons,
       },
     },
-    icons: {
-      iconPack: 'fa',
+    extendTheme: {
+      baseStyles: {
+        CButton: {
+          borderRadius: 'sm',
+        },
+        CPopper: {
+          borderRadius: 'sm',
+          shadow: 'none',
+        },
+        CMenu: {
+          borderRadius: 'sm',
+          shadow: 'none',
+        },
+      },
     },
+    /* extendTheme: {
+      colors: {
+        brand: {
+          // ...
+        },
+      },
+    }, */
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

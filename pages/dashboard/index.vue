@@ -4,12 +4,10 @@
   </CBox>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-
+<script>
 import { CBox } from '@chakra-ui/vue'
 
-export default Vue.extend({
+export default {
   name: 'DashboardPage',
   components: {
     CBox,
@@ -18,5 +16,5 @@ export default Vue.extend({
   data() {
     return { modal: false }
   },
-})
+}
 </script>
