@@ -121,9 +121,6 @@ export default {
       type: Boolean,
     },
   },
-  // data() {
-  //   console.log(this.$chakra.icons)
-  // },
   methods: {
     onCloseLocal() {
       return this.$emit('toggleDrawer')
