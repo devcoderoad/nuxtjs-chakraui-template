@@ -1,7 +1,9 @@
 <template>
-  <CBox as="article">
-    <h1>Dashboard Page</h1>
-    <nuxt-content :document="dashboard" />
+  <CBox>
+    <article>
+      <h1>Billing Page</h1>
+      <nuxt-content :document="dashboard" />
+    </article>
   </CBox>
 </template>
 
@@ -9,11 +11,10 @@
 import { CBox } from '@chakra-ui/vue'
 
 export default {
-  name: 'DashboardPage',
+  name: 'DashboardBilling',
   components: {
     CBox,
   },
-  inject: ['$chakraColorMode', '$toggleColorMode'],
   layout: 'dashboard',
   async asyncData({ $content }) {
     const dashboard = await $content('dashboard').fetch()
@@ -22,7 +23,7 @@ export default {
     }
   },
   data() {
-    return { modal: false, heading: 'Dashboard' }
+    return { modal: false }
   },
 }
 </script>

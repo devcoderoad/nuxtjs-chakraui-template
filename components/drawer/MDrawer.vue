@@ -1,6 +1,6 @@
 <template>
   <CDrawer
-    :autoFocus="true"
+    :autoFocus="false"
     :isOpen="cIsDrawerOpen"
     :onClose="onCloseDrawer"
     :returnFocusOnClose="false"
@@ -24,36 +24,61 @@
             border-radius="0"
             @click="onCloseLocal"
           />
-          <CStack :spacing="5" mt="12" fontWeight="bold" color="gray.500">
-            <CHeading size="md" color="gray" marginBottom="2">Account</CHeading>
+          <CStack
+            v-chakra="{
+              a: {
+                marginBottom: '.175rem',
+                _hover: {
+                  textDecoration: 'none',
+                  color: 'gray.400',
+                  marginLeft: '.125rem',
+                },
+                svg: {
+                  marginRight: 'var(--space-1)',
+                },
+              },
+              h2: {
+                color: 'gray.400',
+                marginBottom: 'var(--space-5)',
+              },
+            }"
+            :spacing="5"
+            mt="12"
+            fontWeight="bold"
+            color="gray.500"
+            height="100%"
+            overflowY="auto"
+          >
+            <CHeading size="md">Account</CHeading>
             <CBox as="nav" m="0">
-              <CLink
-                href="/profile"
-                d="block"
-                :_hover="{ underline: 'none', color: 'gray.400' }"
-              >
-                <CIcon name="user" mr="1" /> Profile
+              <CLink href="/profile" d="block">
+                <CIcon name="user" /> Profile
               </CLink>
-              <CLink
-                href="/setting"
-                d="block"
-                :_hover="{ underline: 'none', color: 'gray.400' }"
-                ><CIcon name="home" mr="1" /> Setting</CLink
+              <CLink href="/setting" d="block"
+                ><CIcon name="gear" /> Setting</CLink
               >
             </CBox>
-            <CHeading size="md" color="gray" marginBottom="2"
-              >Typograpy</CHeading
-            >
+            <CHeading size="md">Typograpy</CHeading>
             <CBox as="nav" m="0">
-              <CLink href="/paragraph" d="block">Paragraph</CLink>
-              <CLink href="/heading" d="block">Heading</CLink>
-              <CLink href="/cards" d="block">Cards</CLink>
+              <CLink href="/paragraph" d="block"
+                ><CIcon name="moon" /> Paragraph</CLink
+              >
+              <CLink href="/heading" d="block"
+                ><CIcon name="warning-alt" /> Heading</CLink
+              >
+              <CLink href="/cards" d="block"><CIcon name="tag" /> Cards</CLink>
             </CBox>
-            <CHeading size="md" color="gray" marginBottom="2">Element</CHeading>
+            <CHeading size="md"> Element</CHeading>
             <CBox as="nav" m="0">
-              <CLink href="/forms" d="block">Forms</CLink>
-              <CLink href="/charts" d="block">Charts</CLink>
-              <CLink href="/tables" d="block">Tables</CLink>
+              <CLink href="/forms" d="block"
+                ><CIcon name="id-badge" /> Forms</CLink
+              >
+              <CLink href="/charts" d="block"
+                ><CIcon name="envelope" /> Charts</CLink
+              >
+              <CLink href="/tables" d="block"
+                ><CIcon name="comment" /> Tables</CLink
+              >
             </CBox>
           </CStack>
         </CBox>
@@ -96,6 +121,9 @@ export default {
       type: Boolean,
     },
   },
+  // data() {
+  //   console.log(this.$chakra.icons)
+  // },
   methods: {
     onCloseLocal() {
       return this.$emit('toggleDrawer')

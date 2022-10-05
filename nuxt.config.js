@@ -1,5 +1,5 @@
 import * as icons from './utils/icons'
-
+// console.log(icons)
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -55,7 +55,16 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
+  content: {
+    markdown: {
+      prism: {
+        theme: 'prism-themes/themes/prism-material-oceanic.css',
+      },
+    },
+    nestedProperties: ['author.name'],
+    // Only search in title
+    fullTextSearchFields: ['title'],
+  },
 
   /**
    * Add extend the plugin options under the `chakra` key.
@@ -66,9 +75,7 @@ export default {
       // icons library for Chakra's
       // internal icon parser
       iconPack: 'fa',
-      iconSet: {
-        ...icons,
-      },
+      iconSet: icons,
     },
     extendTheme: {
       baseStyles: {
