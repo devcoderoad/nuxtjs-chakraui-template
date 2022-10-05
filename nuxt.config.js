@@ -6,7 +6,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxtjs-chakraui-template2',
+    title: 'nuxtjs-chakraui-template',
     htmlAttrs: {
       lang: 'en',
     },
@@ -81,6 +81,10 @@ export default {
       baseStyles: {
         CButton: {
           borderRadius: 'sm',
+          _focus: { outline: 'none' },
+        },
+        CDrawerCloseButton: {
+          _focus: { outline: 'none' },
         },
         CPopper: {
           borderRadius: 'sm',
