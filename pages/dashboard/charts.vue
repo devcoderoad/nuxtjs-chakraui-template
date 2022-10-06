@@ -1,18 +1,11 @@
 <template>
   <CBox as="article">
-    <!-- <CHeading color="brand.100">Heading 100 Brand</CHeading>
-    <CHeading color="brand.300">Heading 300 Brand</CHeading>
-    <CHeading color="brand.600">Heading 600 Brand</CHeading>
-    <CHeading color="brand.900">Heading 900 Brand</CHeading>
-    <CDivider />
-    <CHeading color="secondary.100">Heading 100 Secondary</CHeading>
-    <CHeading color="secondary.300">Heading 300 Secondary</CHeading>
-    <CHeading color="secondary.600">Heading 600 Secondary</CHeading>
-    <CHeading color="secondary.900" textShadow="sm"
-      >Heading 900 Secondary</CHeading
-    >
-    <CDivider />
-    Mode: <code>{{ chakraColorMode }}</code> -->
+    <MSeoHead
+      title="Nuxt.js Chakra UI Dashboard Charts Page"
+      description="List of Charts using Chakra UI components in Nuxt.js Admin Dashboard"
+      image="./static/logo.png"
+      url="https://dykraf.com"
+    />
     <CStack spacing="10" isInline py="5" direction="row" justify="center">
       <CBox
         shadow="md"
@@ -26,7 +19,7 @@
           '15%', // 992px upwards
         ]"
       >
-        <CHeading size="md">Cards</CHeading>
+        <CHeading size="md" color="primary.100">Cards</CHeading>
       </CBox>
       <CBox
         shadow="md"
@@ -40,7 +33,7 @@
           '15%', // 992px upwards
         ]"
       >
-        <CHeading size="md">Cards</CHeading>
+        <CHeading size="md" color="primary.100">Cards</CHeading>
       </CBox>
       <CBox
         shadow="md"
@@ -54,7 +47,7 @@
           '15%', // 992px upwards
         ]"
       >
-        <CHeading size="md">Cards</CHeading>
+        <CHeading size="md" color="primary.100">Cards</CHeading>
       </CBox>
     </CStack>
     <CDivider />
@@ -63,6 +56,8 @@
 
 <script>
 import { CStack, CBox, CHeading, CDivider } from '@chakra-ui/vue'
+import MSeoHead from '@/components/SeoHead'
+
 export default {
   name: 'DashboardCharts',
   components: {
@@ -70,13 +65,25 @@ export default {
     CBox,
     CHeading,
     CDivider,
+    MSeoHead,
   },
+  // inject: ['$chakraColorMode', '$toggleColorMode', `$mode`],
   layout: 'dashboard',
   // data() {
   //   console.log(this)
   // },
+  // methods: {
+  //   $mmode(var1, var2) {
+  //     return this.$mode(var1, var2)
+  //   },
+  // },
   // head() {
-  //   // console.log(this)
+  // console.log(this.chakraColorMode)
+  // console.log(this.$mode)
+  // },
+
+  // created() {
+  //   this.mode = this.$mode
   // },
 }
 </script>

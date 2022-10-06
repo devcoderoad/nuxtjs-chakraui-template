@@ -9,7 +9,10 @@
   >
     <CHeading text-align="center" mb="4"> ⚡️ Hello chakra-ui/vue </CHeading>
     <CFlex justify="center" direction="column" align="center">
-      <CBox mb="3">
+      <CBox my="3">
+        <img :src="logo" width="100px" alt="Alternative" />
+      </CBox>
+      <CBox my="3">
         <CIconButton
           mr="3"
           :icon="colorMode === 'light' ? 'moon' : 'sun'"
@@ -165,6 +168,8 @@ import {
   CLink,
 } from '@chakra-ui/vue'
 
+import logo from '@/static/logo.svg'
+
 export default {
   name: 'IndexPage',
   components: {
@@ -210,6 +215,7 @@ export default {
           bgSize: 'contain',
         },
       },
+      logo,
     }
   },
   computed: {

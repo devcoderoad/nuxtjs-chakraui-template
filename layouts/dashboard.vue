@@ -11,6 +11,7 @@
         <CReset />
         <MDashboard :heading="heading" />
         <CBox :ml="{ base: 0, md: 60 }" p="4">
+          <MSeoHead />
           <Nuxt />
         </CBox>
       </CBox>
@@ -27,9 +28,8 @@ import {
 } from '@chakra-ui/vue'
 
 /* Components */
-import MDashboard from '~/components/navbar/MDashboard.vue'
-
-// console.log(Chakra)
+import MSeoHead from '~/components/SeoHead'
+import MDashboard from '~/components/navbar/MDashboard'
 
 export default {
   name: 'DashboardLayout',
@@ -38,6 +38,7 @@ export default {
     CColorModeProvider,
     CReset,
     CBox,
+    MSeoHead,
     MDashboard,
   },
   data() {

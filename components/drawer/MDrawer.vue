@@ -82,6 +82,9 @@
                 ><CIcon name="comment" /> Tables</CLink
               >
             </CBox>
+            <CBox mt="6" mx="auto">
+              <img :src="logo" width="100px" alt="Alternative" />
+            </CBox>
           </CStack>
         </CBox>
       </CDrawerBody>
@@ -104,6 +107,8 @@ import {
   CStack,
 } from '@chakra-ui/vue'
 
+import logo from '@/static/logo.svg'
+
 export default {
   name: 'MDrawer',
   components: {
@@ -122,6 +127,9 @@ export default {
     cIsDrawerOpen: {
       type: Boolean,
     },
+  },
+  data() {
+    return { logo }
   },
   methods: {
     onCloseLocal() {
