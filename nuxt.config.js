@@ -1,5 +1,6 @@
 import * as icons from './utils/icons'
-// console.log(icons)
+import colors from './utils/colors'
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -78,6 +79,7 @@ export default {
       iconSet: icons,
     },
     extendTheme: {
+      /* Customize your Chakra UI component base */
       baseStyles: {
         CButton: {
           borderRadius: 'sm',
@@ -95,14 +97,8 @@ export default {
           shadow: 'none',
         },
       },
+      colors,
     },
-    /* extendTheme: {
-      colors: {
-        brand: {
-          // ...
-        },
-      },
-    }, */
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

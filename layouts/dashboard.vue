@@ -29,6 +29,8 @@ import {
 /* Components */
 import MDashboard from '~/components/navbar/MDashboard.vue'
 
+// console.log(Chakra)
+
 export default {
   name: 'DashboardLayout',
   components: {
@@ -39,7 +41,6 @@ export default {
     MDashboard,
   },
   data() {
-    // console.log(this)
     return {
       isDrawerOpen: false,
       onMobileOpen: false,
@@ -59,7 +60,7 @@ export default {
           color: 'whiteAlpha.900',
           bgImage: "url('/svg/wave-triple-dark.svg')",
           bgPos: 'bottom',
-          bgRepeat: 'no-repeat',
+          bgRepeat: 'repeat-x',
           bgSize: 'contain',
         },
         light: {
@@ -67,7 +68,7 @@ export default {
           color: 'gray.900',
           bgImage: "url('/svg/wave-triple.svg')",
           bgPos: 'bottom',
-          bgRepeat: 'no-repeat',
+          bgRepeat: 'repeat-x',
           bgSize: 'contain',
         },
       },
@@ -79,6 +80,9 @@ export default {
       return this.chakraColorMode
     },
   },
+  // created() {
+  // this.chakraColorMode = 'dark'
+  // },
   methods: {
     toggleDrawer() {
       const vm = this

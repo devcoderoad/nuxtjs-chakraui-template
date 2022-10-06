@@ -27,7 +27,7 @@
           <CStack
             v-chakra="{
               a: {
-                marginBottom: '.175rem',
+                marginBottom: '.275rem',
                 _hover: {
                   textDecoration: 'none',
                   color: 'gray.400',
@@ -50,33 +50,35 @@
             overflowY="auto"
           >
             <CHeading size="md">Account</CHeading>
-            <CBox as="nav" m="0">
-              <CLink href="/profile" d="block">
+            <CBox as="nav">
+              <CLink href="/dashboard/profile" d="block">
                 <CIcon name="user" /> Profile
               </CLink>
-              <CLink href="/setting" d="block"
+              <CLink href="/dashboard/setting" d="block"
                 ><CIcon name="gear" /> Setting</CLink
               >
             </CBox>
             <CHeading size="md">Typograpy</CHeading>
-            <CBox as="nav" m="0">
-              <CLink href="/paragraph" d="block"
+            <CBox as="nav">
+              <CLink href="/dashboard/paragraph" d="block"
                 ><CIcon name="moon" /> Paragraph</CLink
               >
-              <CLink href="/heading" d="block"
+              <CLink href="/dashboard/heading" d="block"
                 ><CIcon name="warning-alt" /> Heading</CLink
               >
-              <CLink href="/cards" d="block"><CIcon name="tag" /> Cards</CLink>
+              <CLink href="/dashboard/cards" d="block"
+                ><CIcon name="tag" /> Cards</CLink
+              >
             </CBox>
             <CHeading size="md"> Element</CHeading>
-            <CBox as="nav" m="0">
-              <CLink href="/forms" d="block"
+            <CBox as="nav">
+              <CLink href="/dashboard/forms" d="block"
                 ><CIcon name="id-badge" /> Forms</CLink
               >
-              <CLink href="/charts" d="block"
+              <CLink href="/dashboard/charts" d="block"
                 ><CIcon name="envelope" /> Charts</CLink
               >
-              <CLink href="/tables" d="block"
+              <CLink href="/dashboard/tables" d="block"
                 ><CIcon name="comment" /> Tables</CLink
               >
             </CBox>

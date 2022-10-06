@@ -74,7 +74,15 @@
           <CModalCloseButton @click="showModal = false" />
         </CModalContent>
       </CModal>
-      <CBox d="flex" justify-content="center" justify="center" mx="auto">
+      <CBox
+        d="flex"
+        wrap
+        direction="row"
+        justify-content="center"
+        justify="center"
+        mx="auto"
+        mt="12"
+      >
         <CStack spacing="5" is-inline>
           <CBox
             :p="5"
@@ -88,6 +96,7 @@
               bg: colorMode === 'light' ? 'gray.100' : 'gray.800',
               shadow: 'lg',
             }"
+            :w="{ base: '33%', md: '100%' }"
           >
             <CHeading>See the Vue</CHeading>
             <CText :mt="4">Vue makes front-end development a breeze.</CText>
@@ -104,6 +113,7 @@
               bg: colorMode === 'light' ? 'gray.100' : 'gray.800',
               shadow: 'lg',
             }"
+            :w="{ base: '33%', md: '100%' }"
           >
             <CHeading>Go Nuxt!</CHeading>
             <CText :mt="4">Nuxt makes writing Vue even easier.</CText>
@@ -120,6 +130,7 @@
               bg: colorMode === 'light' ? 'gray.100' : 'gray.800',
               shadow: 'lg',
             }"
+            :w="{ base: '33%', md: '100%' }"
           >
             <CLink href="/dashboard" pass-href
               ><CHeading>Go to Dashboard</CHeading></CLink
@@ -187,7 +198,7 @@ export default {
           color: 'whiteAlpha.900',
           bgImage: "url('/svg/wave-dark.svg')",
           bgPos: 'bottom',
-          bgRepeat: 'no-repeat',
+          bgRepeat: 'repeat-x',
           bgSize: 'contain',
         },
         light: {
@@ -195,7 +206,7 @@ export default {
           color: 'gray.900',
           bgImage: "url('/svg/wave.svg')",
           bgPos: 'bottom',
-          bgRepeat: 'no-repeat',
+          bgRepeat: 'repeat-x',
           bgSize: 'contain',
         },
       },
