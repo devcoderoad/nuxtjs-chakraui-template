@@ -3,21 +3,37 @@
 </template>
 
 <script>
+import GLOBAL from '~/constants/global'
+
+/** current environment */
+/* 
+const CURRENT_ENV = process.env.ENV || 'prod'
+const isProduction = CURRENT_ENV === 'prod'
+ */
+
+/** global constants **/
+const { company, title, description, image, url, lang } = GLOBAL
+
+const BASEURL =
+  process.env.NODE_ENV === 'development'
+    ? 'http://localhost:3000'
+    : 'https://nuxtjs-chakraui-template.netlify.app'
+
 export default {
-  name: 'MSeoHead',
+  name: 'SeoHead',
   props: {
-    title: { type: String, default: () => 'Nuxt.js Chakra UI' },
+    title: { type: String, default: () => title },
     description: {
       type: String,
-      default: () => 'List of webpages using Chakra UI components in Nuxt.js',
+      default: () => description,
     },
-    image: { type: String, default: () => './static/logo.png' },
-    url: { type: String, default: () => 'https://dykraf.com' },
+    image: { type: String, default: () => `${BASEURL}${image}` },
+    url: { type: String, default: () => url || BASEURL },
   },
   head() {
     const { title, description, image, url } = this
-    const name = 'dykraf.com'
-    const logo = 'logo.png'
+    const name = company
+    const logo = image
 
     const structuredData = [
       {
@@ -147,7 +163,7 @@ export default {
     return {
       title,
       description,
-      htmlAttrs: { lang: 'en' },
+      htmlAttrs: { lang },
       meta: [
         {
           hid: 'description',

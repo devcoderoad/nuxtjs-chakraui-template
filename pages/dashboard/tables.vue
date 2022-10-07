@@ -6,11 +6,7 @@
       <thead>
         <tr>
           <th>Title</th>
-        </tr>
-        <tr>
           <th>Description</th>
-        </tr>
-        <tr>
           <th>Status</th>
         </tr>
       </thead>
