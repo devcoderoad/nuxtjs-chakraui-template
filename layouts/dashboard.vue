@@ -1,5 +1,6 @@
 <template>
   <CThemeProvider>
+    <CReset />
     <CColorModeProvider>
       <CBox
         font-family="body"
@@ -8,10 +9,10 @@
         role="dashboard"
         v-bind="mainStylesContent[mode]"
       >
-        <CReset />
+        <MSeoHead />
         <MDashboard :heading="heading" />
+        <!-- <MDrawer isOpen isRelative /> -->
         <CBox :ml="{ base: 0, md: 60 }" p="4">
-          <MSeoHead />
           <Nuxt />
         </CBox>
       </CBox>
@@ -30,6 +31,7 @@ import {
 /* Components */
 import MSeoHead from '~/components/SeoHead'
 import MDashboard from '~/components/navbar/MDashboard'
+// import MDrawer from '~/components/drawer/MDrawer'
 
 export default {
   name: 'DashboardLayout',
@@ -40,6 +42,7 @@ export default {
     CBox,
     MSeoHead,
     MDashboard,
+    // MDrawer,
   },
   data() {
     return {
@@ -92,3 +95,15 @@ export default {
   },
 }
 </script>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+</style>

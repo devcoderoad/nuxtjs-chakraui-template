@@ -1,7 +1,7 @@
 <template>
   <CBox background-color="gray.100" v-bind="mainStyles[colorMode]">
     <MDrawer
-      :cIsDrawerOpen="isDrawerOpen"
+      :isOpen="isDrawerOpen"
       :onOpen="onMobileOpen"
       @toggleDrawer="toggleDrawer"
     />

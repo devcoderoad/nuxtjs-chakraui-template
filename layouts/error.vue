@@ -1,21 +1,22 @@
 <template>
-  <!-- <v-app id="error" dark> -->
-  <CFlex justify="center" h="100vh">
-    <CHeading v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </CHeading>
-    <CHeading v-else>
-      {{ otherError }}
-    </CHeading>
-    <CBox d="block">
-      <NuxtLink to="/"> Home page </NuxtLink>
-    </CBox>
-  </CFlex>
-  <!-- </v-app> -->
+  <v-app id="error" dark>
+    <CReset />
+    <CFlex justify="center" h="100vh">
+      <CHeading v-if="error.statusCode === 404">
+        {{ pageNotFound }}
+      </CHeading>
+      <CHeading v-else>
+        {{ otherError }}
+      </CHeading>
+      <CBox d="block">
+        <NuxtLink to="/"> Home page </NuxtLink>
+      </CBox>
+    </CFlex>
+  </v-app>
 </template>
 
 <script>
-import { CBox, CFlex, CHeading } from '@chakra-ui/vue'
+import { CReset, CBox, CFlex, CHeading } from '@chakra-ui/vue'
 
 export default {
   name: 'EmptyLayout',
@@ -23,6 +24,7 @@ export default {
     CBox,
     CFlex,
     CHeading,
+    CReset,
     // CDivider,
   },
   layout: 'empty',
@@ -52,3 +54,15 @@ export default {
 <!-- <style lang="scss" scoped>
 @import '~/assets/scss/theme';
 </style> -->
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+</style>

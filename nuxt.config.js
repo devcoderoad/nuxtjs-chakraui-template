@@ -103,4 +103,15 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Page transitions
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in', //,
+    // beforeEnter(el) {
+    //   console.log('Before enter...')
+    // }
+  },
+  // Loading color
+  loading: { color: '#ff0000' },
 }

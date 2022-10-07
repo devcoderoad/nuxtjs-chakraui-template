@@ -1,8 +1,8 @@
 <template>
   <CThemeProvider>
+    <CReset />
     <CColorModeProvider>
       <CBox font-family="body" as="main">
-        <CReset />
         <MSeoHead />
         <Nuxt />
       </CBox>
@@ -31,3 +31,15 @@ export default {
   },
 }
 </script>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+}
+</style>

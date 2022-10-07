@@ -1,7 +1,7 @@
 <template>
   <CDrawer
-    :autoFocus="false"
-    :isOpen="cIsDrawerOpen"
+    :auto-focus="false"
+    :isOpen="isOpen"
     :onClose="onCloseDrawer"
     :returnFocusOnClose="false"
     :onOverlayClick="onOverlayClick"
@@ -129,7 +129,7 @@ export default {
     CStack,
   },
   props: {
-    cIsDrawerOpen: {
+    isOpen: {
       type: Boolean,
     },
   },
