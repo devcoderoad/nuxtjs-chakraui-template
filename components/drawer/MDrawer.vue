@@ -58,6 +58,7 @@
                 ><CIcon name="gear" /> Setting</CLink
               >
             </CBox>
+            <CDivider />
             <CHeading size="md">Typograpy</CHeading>
             <CBox as="nav">
               <CLink href="/dashboard/paragraph" d="block"
@@ -70,6 +71,7 @@
                 ><CIcon name="tag" /> Cards</CLink
               >
             </CBox>
+            <CDivider />
             <CHeading size="md"> Element</CHeading>
             <CBox as="nav">
               <CLink href="/dashboard/forms" d="block"
@@ -82,6 +84,7 @@
                 ><CIcon name="comment" /> Tables</CLink
               >
             </CBox>
+            <CDivider />
             <CBox mt="6" mx="auto">
               <img :src="logo" width="100px" alt="Alternative" />
             </CBox>
@@ -102,6 +105,7 @@ import {
   CDrawerOverlay,
   CDrawerCloseButton,
   CHeading,
+  CDivider,
   CLink,
   CIcon,
   CStack,
@@ -119,6 +123,7 @@ export default {
     CDrawerOverlay,
     CDrawerCloseButton,
     CHeading,
+    CDivider,
     CLink,
     CIcon,
     CStack,

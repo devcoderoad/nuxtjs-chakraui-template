@@ -3,7 +3,7 @@
     <MSeoHead
       title="Nuxt.js Chakra UI Dashboard Charts Page"
       description="List of Charts using Chakra UI components in Nuxt.js Admin Dashboard"
-      image="./static/logo.png"
+      image="/logo.png"
       url="https://dykraf.com"
     />
     <CStack spacing="10" isInline py="5" direction="row" justify="center">
