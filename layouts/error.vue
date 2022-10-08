@@ -51,20 +51,3 @@ export default {
   },
 }
 </script>
-
-<!-- Styles -->
-<!-- <style lang="scss" scoped>
-@import '~/assets/scss/theme';
-</style> -->
-
-<style>
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.5s;
-}
-
-.page-enter,
-.page-leave-active {
-  opacity: 0;
-}
-</style>

@@ -1,12 +1,5 @@
 <template>
-  <CBox
-    v-bind="mainStyles[colorMode]"
-    d="flex"
-    w="100vw"
-    h="100vh"
-    flex-dir="column"
-    justify-content="center"
-  >
+  <CBox>
     <CHeading text-align="center" mb="4"> ⚡️ Hello chakra-ui/vue </CHeading>
     <CFlex justify="center" direction="column" align="center">
       <CBox my="3">
@@ -19,7 +12,7 @@
         :d="['block', 'flex']"
         pos="relative"
       >
-        <CFLex>
+        <CBox>
           <CHeading>Welcome to NuxtCha ⚡️ </CHeading>
           <CText as="p" color="gray.500">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
@@ -29,7 +22,7 @@
             nihil, totam necessitatibus velit quidem odio dolorem ad maiores
             fuga.
           </CText>
-        </CFLex>
+        </CBox>
         <div
           v-chakra="{
             position: 'relative',
@@ -39,7 +32,7 @@
               content: `' '`,
             },
             ':after': {
-              backgroundColor: 'brand.900',
+              bgColor: 'blue.100',
               position: 'absolute',
               top: '50px',
               right: '50px',
@@ -57,7 +50,7 @@
             boxSize="400px"
             maxWidth="400px"
             borderWidth="12px"
-            borderColor="brand.600"
+            borderColor="blue.200"
             alt="NuxtCha"
             src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
             fallbackSrc="https://via.placeholder.com/150"
@@ -249,24 +242,6 @@ export default {
   data() {
     return {
       showModal: false,
-      mainStyles: {
-        dark: {
-          bg: 'gray.700',
-          color: 'whiteAlpha.900',
-          bgImage: "url('/svg/wave-dark.svg')",
-          bgPos: 'bottom',
-          bgRepeat: 'repeat-x',
-          bgSize: 'contain',
-        },
-        light: {
-          bg: 'tranparent',
-          color: 'gray.900',
-          bgImage: "url('/svg/wave.svg')",
-          bgPos: 'bottom',
-          bgRepeat: 'repeat-x',
-          bgSize: 'contain',
-        },
-      },
       logo,
     }
   },

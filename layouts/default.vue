@@ -2,7 +2,7 @@
   <CThemeProvider>
     <CReset />
     <CColorModeProvider>
-      <CBox font-family="body" as="main">
+      <CBox v-bind="mainStyles[colorMode]">
         <MSeoHead />
         <Nuxt />
       </CBox>
@@ -29,17 +29,34 @@ export default {
     CBox,
     MSeoHead,
   },
+  data() {
+    return {
+      mainStyles: {
+        light: {
+          bg: 'tranparent',
+          color: 'gray.900',
+          h: ['100%', '100vh'],
+        },
+        dark: {
+          bg: 'gray.700',
+          color: 'whiteAlpha.900',
+          h: ['100%', '100vh'],
+        },
+      },
+    }
+  },
+  head() {
+    return {
+      bodyAttrs: {
+        class:
+          this.chakraColorMode !== 'light' ? 'theme--dark' : 'theme--light',
+      },
+    }
+  },
+  computed: {
+    colorMode() {
+      return this.chakraColorMode
+    },
+  },
 }
 </script>
-
-<style>
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.5s;
-}
-
-.page-enter,
-.page-leave-active {
-  opacity: 0;
-}
-</style>

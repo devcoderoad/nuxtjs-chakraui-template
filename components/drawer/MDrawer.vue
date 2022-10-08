@@ -18,6 +18,9 @@
           :w="{ base: 'full' }"
         >
           <CDrawerCloseButton
+            :_focus="{
+              boxShadow: 'none',
+            }"
             ml="auto"
             position="absolute"
             right="2"
@@ -28,10 +31,15 @@
             v-chakra="{
               a: {
                 marginBottom: '.275rem',
+                outline: 0,
+                border: 0,
                 _hover: {
                   textDecoration: 'none',
                   color: 'gray.400',
                   marginLeft: '.125rem',
+                },
+                _focus: {
+                  boxShadow: 'none',
                 },
                 svg: {
                   marginRight: 'var(--space-1)',

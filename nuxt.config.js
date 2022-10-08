@@ -21,7 +21,16 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/main.css'],
+
+  // Layout transitions
+  layoutTransition: {
+    name: 'my-layouts',
+    mode: 'out-in',
+  },
+
+  // Page transitions
+  pageTransition: 'my-page',
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -78,8 +87,9 @@ export default {
       iconPack: 'fa',
       iconSet: icons,
     },
+    // initialColorMode: 'dark',
     extendTheme: {
-      /* Customize your Chakra UI component base */
+      // Customize your Chakra UI component base
       baseStyles: {
         CButton: {
           borderRadius: 'sm',
@@ -104,14 +114,6 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  // Page transitions
-  pageTransition: {
-    name: 'page',
-    mode: 'out-in', //,
-    // beforeEnter(el) {
-    //   console.log('Before enter...')
-    // }
-  },
   // Loading color
   loading: { color: '#ff0000' },
 }

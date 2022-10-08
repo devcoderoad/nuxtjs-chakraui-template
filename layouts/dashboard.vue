@@ -12,7 +12,7 @@
         <MSeoHead />
         <MDashboard :heading="heading" />
         <!-- <MDrawer isOpen isRelative /> -->
-        <CBox :ml="{ base: 0, md: 60 }" p="4">
+        <CBox :mx="{ base: 16, md: 60 }" pb="28" pt="4">
           <Nuxt />
         </CBox>
       </CBox>
@@ -95,15 +95,3 @@ export default {
   },
 }
 </script>
-
-<style>
-.page-enter-active,
-.page-leave-active {
-  transition: opacity 0.5s;
-}
-
-.page-enter,
-.page-leave-active {
-  opacity: 0;
-}
-</style>

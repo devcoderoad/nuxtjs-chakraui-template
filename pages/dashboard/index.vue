@@ -9,10 +9,194 @@
     <CHeading color="secondary.300" fontWeight="black">Dashboard Page</CHeading>
     <CHeading color="secondary.600" fontWeight="black">Dashboard Page</CHeading>
     <CHeading color="secondary.900" fontWeight="black">Dashboard Page</CHeading>
-    <CBox
-      ><CImage
-        src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
-    /></CBox>
+    <Cbox>
+      <CSimpleGrid
+        :columns="[1, 2, 3, 4]"
+        :spacing="['20px', '40px']"
+        mx="auto"
+        mt="12"
+        mb="24"
+      >
+        <CBox
+          :_hover="{ shadow: 'xl' }"
+          borderWidth="1px"
+          overflow="hidden"
+          shadow="lg"
+          p="10"
+          rounded="lg"
+          :maxW="['xxl', 'md']"
+          ><CImage
+            mb="8"
+            borderRadius="full"
+            borderWidth="12px"
+            borderColor="gray.200"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+          />
+          <CBox d="flex" align-items="baseline">
+            <CBadge rounded="full" px="2" variant-color="green"> New </CBadge>
+            <CBox
+              color="gray.500"
+              font-weight="semibold"
+              letter-spacing="wide"
+              font-size="xs"
+              text-transform="uppercase"
+              ml="2"
+            >
+              3 beds &bull; 2 baths
+            </CBox>
+          </CBox>
+          <CBox
+            mt="1"
+            font-weight="semibold"
+            as="h4"
+            line-height="tight"
+            is-truncated
+          >
+            Modern home in city center in the heart of historic Los Angeles
+          </CBox>
+          <CBox>
+            $1,900.00 / wk
+            <CBox as="span" color="gray.600" fontSize="sm"> / wk </CBox>
+          </CBox>
+        </CBox>
+        <CBox
+          :_hover="{ shadow: 'xl' }"
+          borderWidth="1px"
+          overflow="hidden"
+          shadow="lg"
+          p="10"
+          rounded="lg"
+          :maxW="['xxl', 'md']"
+          ><CImage
+            mb="8"
+            borderRadius="full"
+            borderWidth="12px"
+            borderColor="gray.200"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+          />
+          <CBox d="flex" align-items="baseline">
+            <CBadge rounded="full" px="2" variant-color="green"> New </CBadge>
+            <CBox
+              color="gray.500"
+              font-weight="semibold"
+              letter-spacing="wide"
+              font-size="xs"
+              text-transform="uppercase"
+              ml="2"
+            >
+              3 beds &bull; 2 baths
+            </CBox>
+          </CBox>
+          <CBox
+            mt="1"
+            font-weight="semibold"
+            as="h4"
+            line-height="tight"
+            is-truncated
+          >
+            Modern home in city center in the heart of historic Los Angeles
+          </CBox>
+          <CBox>
+            $1,900.00 / wk
+            <CBox as="span" color="gray.600" fontSize="sm"> / wk </CBox>
+          </CBox>
+        </CBox>
+        <CBox
+          :_hover="{ shadow: 'xl' }"
+          borderWidth="1px"
+          overflow="hidden"
+          shadow="lg"
+          p="10"
+          rounded="lg"
+          :maxW="['xxl', 'md']"
+        >
+          <CImage
+            mb="8"
+            borderRadius="full"
+            borderWidth="12px"
+            borderColor="gray.200"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+          />
+          <CBox d="flex" align-items="baseline">
+            <CBadge rounded="full" px="2" variant-color="green"> New </CBadge>
+            <CBox
+              color="gray.500"
+              font-weight="semibold"
+              letter-spacing="wide"
+              font-size="xs"
+              text-transform="uppercase"
+              ml="2"
+            >
+              3 beds &bull; 2 baths
+            </CBox>
+          </CBox>
+          <CBox
+            mt="1"
+            font-weight="semibold"
+            as="h4"
+            line-height="tight"
+            is-truncated
+          >
+            Modern home in city center in the heart of historic Los Angeles
+          </CBox>
+          <CBox>
+            $1,900.00 / wk
+            <CBox as="span" color="gray.600" fontSize="sm"> / wk </CBox>
+          </CBox>
+        </CBox>
+        <CBox
+          :_hover="{ shadow: 'xl' }"
+          borderWidth="1px"
+          overflow="hidden"
+          shadow="lg"
+          p="10"
+          rounded="lg"
+          :maxW="['xxl', 'md']"
+        >
+          <CImage
+            mb="8"
+            borderRadius="full"
+            borderWidth="12px"
+            borderColor="gray.200"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+          />
+          <CBox d="flex" align-items="baseline">
+            <CBadge rounded="full" px="2" variant-color="green"> New </CBadge>
+            <CBox
+              color="gray.500"
+              font-weight="semibold"
+              letter-spacing="wide"
+              font-size="xs"
+              text-transform="uppercase"
+              ml="2"
+            >
+              3 beds &bull; 2 baths
+            </CBox>
+          </CBox>
+          <CBox
+            mt="1"
+            font-weight="semibold"
+            as="h4"
+            line-height="tight"
+            is-truncated
+          >
+            Modern home in city center in the heart of historic Los Angeles
+          </CBox>
+          <CBox>
+            $1,900.00 / wk
+            <CBox as="span" color="gray.600" fontSize="sm"> / wk </CBox>
+          </CBox>
+        </CBox>
+      </CSimpleGrid>
+    </Cbox>
     <nuxt-content :document="dashboard" />
     <MAlert
       mode="warning"
@@ -32,7 +216,7 @@
 </template>
 <script>
 /* Chakra UI */
-import { CBox, CHeading, CImage } from '@chakra-ui/vue'
+import { CBox, CSimpleGrid, CHeading, CImage } from '@chakra-ui/vue'
 /* Components */
 import MAlert from '~/components/alert/MAlert.vue'
 import MToast from '~/components/toast/MToast.vue'
@@ -41,6 +225,7 @@ export default {
   name: 'DashboardPage',
   components: {
     CBox,
+    CSimpleGrid,
     CHeading,
     CImage,
     MAlert,

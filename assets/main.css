@@ -1,0 +1,44 @@
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.my-layouts-enter-active,
+.my-layouts-leave-active {
+  transition: opacity 0.5s;
+}
+.my-layouts-enter,
+.my-layouts-leave-active {
+  opacity: 0;
+}
+
+.my-page-enter-active,
+.my-page-leave-active {
+  transition: opacity 0.5s;
+}
+.my-page-enter,
+.my-page-leave-to {
+  opacity: 0;
+}
+
+/* color modes */
+body[class='theme--light'],
+body[class='theme--dark'] {
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: contain;
+}
+
+body[class='theme--light'] {
+  background-color: transparent;
+  background-image: url('/svg/wave.svg');
+}
+
+body[class='theme--dark'] {
+  background-color: var(--colors-gray-700);
+  background-image: url('/svg/wave-dark.svg');
+}
