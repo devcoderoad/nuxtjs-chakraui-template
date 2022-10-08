@@ -12,6 +12,58 @@
       <CBox my="3">
         <img :src="logo" width="100px" alt="Alternative" />
       </CBox>
+      <CBox
+        :w="['100%', '66%']"
+        my="3"
+        mx="auto"
+        :d="['block', 'flex']"
+        pos="relative"
+      >
+        <CFLex>
+          <CHeading>Welcome to NuxtCha ⚡️ </CHeading>
+          <CText as="p" color="gray.500">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+            expedita earum, dolor culpa ullam ut, molestias nesciunt, atque aut
+            vero voluptatem. Fugiat est deleniti natus aspernatur ipsa laborum
+            consectetur repudiandae delectus? Sapiente asperiores quibusdam
+            nihil, totam necessitatibus velit quidem odio dolorem ad maiores
+            fuga.
+          </CText>
+        </CFLex>
+        <div
+          v-chakra="{
+            position: 'relative',
+            mx: 'auto',
+            borderRadius: 'full',
+            ':before, :after': {
+              content: `' '`,
+            },
+            ':after': {
+              backgroundColor: 'brand.900',
+              position: 'absolute',
+              top: '50px',
+              right: '50px',
+              bottom: '50px',
+              width: '400px',
+              height: '400px',
+              maxWidth: '400px',
+              zIndex: -1,
+              borderRadius: 'full',
+            },
+          }"
+        >
+          <CImage
+            borderRadius="full"
+            boxSize="400px"
+            maxWidth="400px"
+            borderWidth="12px"
+            borderColor="brand.600"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+          />
+        </div>
+      </CBox>
       <CBox my="3">
         <CIconButton
           mr="3"

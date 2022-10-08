@@ -97,12 +97,84 @@
         </CText>
       </CBox>
     </CBox>
+    <CBox :width="['100%', '100%']" maxWidth="1280px" justifyContent="middle">
+      <CStack isInline :width="['50%', '100%']">
+        <CBox :width="['33%', '100%']" my="3"
+          ><CImage
+            borderRadius="full"
+            :width="{ base: '450px', md: '100%' }"
+            maxWidth="100%"
+            borderWidth="6px"
+            borderColor="brand.600"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+        /></CBox>
+        <CBox :width="['33%', '100%']" my="3"
+          ><CImage
+            borderRadius="full"
+            :width="{ base: '450px', md: '100%' }"
+            maxWidth="100%"
+            borderWidth="6px"
+            borderColor="brand.600"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+        /></CBox>
+        <CBox :width="['33%', '100%']" my="3"
+          ><CImage
+            borderRadius="full"
+            :width="{ base: '450px', md: '100%' }"
+            maxWidth="100%"
+            borderWidth="6px"
+            borderColor="brand.600"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+        /></CBox>
+        <CBox :width="['33%', '100%']" my="3"
+          ><CImage
+            borderRadius="full"
+            :width="{ base: '450px', md: '100%' }"
+            maxWidth="100%"
+            borderWidth="6px"
+            borderColor="brand.600"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+        /></CBox>
+        <CBox :width="['33%', '100%']" my="3"
+          ><CImage
+            borderRadius="full"
+            :width="{ base: '450px', md: '100%' }"
+            maxWidth="100%"
+            borderWidth="6px"
+            borderColor="brand.600"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+        /></CBox>
+        <CBox :width="['33%', '100%']" my="3"
+          ><CImage
+            borderRadius="full"
+            :width="{ base: '450px', md: '100%' }"
+            maxWidth="100%"
+            borderWidth="6px"
+            borderColor="brand.600"
+            alt="NuxtCha"
+            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+            fallbackSrc="https://via.placeholder.com/150"
+        /></CBox>
+      </CStack>
+    </CBox>
   </CBox>
 </template>
 
 <script>
 import {
-  /* CStack, */ /* CGrid, */ CBox,
+  /* CGrid, */
+  CStack,
+  CBox,
   CHeading,
   CText,
 } from '@chakra-ui/vue'
@@ -111,8 +183,8 @@ import MSeoHead from '@/components/SeoHead'
 export default {
   name: 'DashboardCharts',
   components: {
-    // CStack,
     // CGrid,
+    CStack,
     CBox,
     CHeading,
     CText,

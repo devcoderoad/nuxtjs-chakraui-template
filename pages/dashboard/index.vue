@@ -9,12 +9,16 @@
     <CHeading color="secondary.300" fontWeight="black">Dashboard Page</CHeading>
     <CHeading color="secondary.600" fontWeight="black">Dashboard Page</CHeading>
     <CHeading color="secondary.900" fontWeight="black">Dashboard Page</CHeading>
+    <CBox
+      ><CImage
+        src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
+    /></CBox>
     <nuxt-content :document="dashboard" />
     <MAlert
       mode="warning"
       title="Privacy Policy"
       description="We use cookies in our website, please do accept cookies from our website to experience more advanced features."
-      :position="{ position: 'absolute', bottom: 0, left: 0, right: 0 }"
+      :position="{ position: 'fixed', bottom: 0, left: 0, right: 0 }"
     />
     <MToast
       :show="true"
@@ -28,7 +32,7 @@
 </template>
 <script>
 /* Chakra UI */
-import { CBox, CHeading } from '@chakra-ui/vue'
+import { CBox, CHeading, CImage } from '@chakra-ui/vue'
 /* Components */
 import MAlert from '~/components/alert/MAlert.vue'
 import MToast from '~/components/toast/MToast.vue'
@@ -38,6 +42,7 @@ export default {
   components: {
     CBox,
     CHeading,
+    CImage,
     MAlert,
     MToast,
   },

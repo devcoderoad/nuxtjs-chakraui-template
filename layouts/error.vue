@@ -1,5 +1,6 @@
 <template>
-  <v-app id="error" dark>
+  <!-- <v-app id="error" dark> -->
+  <div>
     <CReset />
     <CFlex justify="center" h="100vh">
       <CHeading v-if="error.statusCode === 404">
@@ -12,7 +13,8 @@
         <NuxtLink to="/"> Home page </NuxtLink>
       </CBox>
     </CFlex>
-  </v-app>
+  </div>
+  <!-- </v-app> -->
 </template>
 
 <script>

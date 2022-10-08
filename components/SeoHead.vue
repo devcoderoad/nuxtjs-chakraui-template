@@ -5,12 +5,6 @@
 <script>
 import GLOBAL from '~/constants/global'
 
-/** current environment */
-/* 
-const CURRENT_ENV = process.env.ENV || 'prod'
-const isProduction = CURRENT_ENV === 'prod'
- */
-
 /** global constants **/
 const { company, title, description, image, url, lang } = GLOBAL
 
