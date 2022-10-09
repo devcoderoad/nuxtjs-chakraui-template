@@ -201,7 +201,7 @@
         </CSimpleGrid>
       </CBox>
     </CBox>
-    <Cbox>
+    <CBox>
       <CSimpleGrid
         :columns="[1, 2, 3, 4]"
         :spacing="['20px', '40px']"
@@ -388,7 +388,7 @@
           </CBox>
         </CBox>
       </CSimpleGrid>
-    </Cbox>
+    </CBox>
     <nuxt-content :document="dashboard" />
     <MAlert
       mode="warning"
