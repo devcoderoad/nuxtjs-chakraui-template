@@ -15,7 +15,7 @@
       <CBox :w="['100%', '66.6%']" :px="[0, 6]">
         <CSimpleGrid
           :columns="[1, 2, 4]"
-          :spacing="['20px', '40px']"
+          :spacing="['20px', '30px']"
           mx="auto"
           mt="6"
           mb="24"
@@ -25,7 +25,7 @@
             borderWidth="1px"
             overflow="hidden"
             shadow="lg"
-            p="10"
+            p="5"
             rounded="lg"
             :maxW="['xxl', 'md']"
             ><CImage
@@ -38,7 +38,7 @@
               fallbackSrc="https://via.placeholder.com/150"
             />
             <CBox d="flex" align-items="baseline">
-              <CBadge rounded="full" px="2" variant-color="green"> New </CBadge>
+              <CBadge rounded="full" px="2" variant-color="green"> Up </CBadge>
               <CBox
                 color="gray.500"
                 font-weight="semibold"
@@ -47,7 +47,7 @@
                 text-transform="uppercase"
                 ml="2"
               >
-                3 beds &bull; 2 baths
+                +30% &raquo; 60%
               </CBox>
             </CBox>
             <CBox
@@ -57,7 +57,7 @@
               line-height="tight"
               is-truncated
             >
-              Modern home in city center in the heart of historic Los Angeles
+              Modern home in city
             </CBox>
             <CBox>
               $1,900.00 / wk
@@ -69,7 +69,7 @@
             borderWidth="1px"
             overflow="hidden"
             shadow="lg"
-            p="10"
+            p="5"
             rounded="lg"
             :maxW="['xxl', 'md']"
             ><CImage
@@ -82,7 +82,9 @@
               fallbackSrc="https://via.placeholder.com/150"
             />
             <CBox d="flex" align-items="baseline">
-              <CBadge rounded="full" px="2" variant-color="green"> New </CBadge>
+              <CBadge rounded="full" px="2" variant-color="orange">
+                Down
+              </CBadge>
               <CBox
                 color="gray.500"
                 font-weight="semibold"
@@ -91,7 +93,7 @@
                 text-transform="uppercase"
                 ml="2"
               >
-                3 beds &bull; 2 baths
+                -10% &raquo; 80%
               </CBox>
             </CBox>
             <CBox
@@ -101,7 +103,7 @@
               line-height="tight"
               is-truncated
             >
-              Modern home in city center in the heart of historic Los Angeles
+              Modern home in city
             </CBox>
             <CBox>
               $1,900.00 / wk
@@ -113,7 +115,7 @@
             borderWidth="1px"
             overflow="hidden"
             shadow="lg"
-            p="10"
+            p="5"
             rounded="lg"
             :maxW="['xxl', 'md']"
           >
@@ -127,7 +129,7 @@
               fallbackSrc="https://via.placeholder.com/150"
             />
             <CBox d="flex" align-items="baseline">
-              <CBadge rounded="full" px="2" variant-color="green"> New </CBadge>
+              <CBadge rounded="full" px="2" variant-color="green"> Up </CBadge>
               <CBox
                 color="gray.500"
                 font-weight="semibold"
@@ -146,7 +148,7 @@
               line-height="tight"
               is-truncated
             >
-              Modern home in city center in the heart of historic Los Angeles
+              Modern home in city
             </CBox>
             <CBox>
               $1,900.00 / wk
@@ -158,7 +160,7 @@
             borderWidth="1px"
             overflow="hidden"
             shadow="lg"
-            p="10"
+            p="5"
             rounded="lg"
             :maxW="['xxl', 'md']"
           >
@@ -172,7 +174,7 @@
               fallbackSrc="https://via.placeholder.com/150"
             />
             <CBox d="flex" align-items="baseline">
-              <CBadge rounded="full" px="2" variant-color="green"> New </CBadge>
+              <CBadge rounded="full" px="2" variant-color="green"> Up </CBadge>
               <CBox
                 color="gray.500"
                 font-weight="semibold"
@@ -191,7 +193,7 @@
               line-height="tight"
               is-truncated
             >
-              Modern home in city center in the heart of historic Los Angeles
+              Modern home in city
             </CBox>
             <CBox>
               $1,900.00 / wk

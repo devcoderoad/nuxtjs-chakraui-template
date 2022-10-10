@@ -1,10 +1,10 @@
 <template>
   <CBox>
-    <CHeading text-align="center" mb="4"> ⚡️ Hello chakra-ui/vue </CHeading>
+    <!-- <CHeading text-align="center" mb="4"> ⚡️ Hello chakra-ui/vue </CHeading> -->
     <CFlex justify="center" direction="column" align="center">
-      <CBox my="3">
+      <!-- <CBox my="3">
         <img :src="logo" width="100px" alt="Alternative" />
-      </CBox>
+      </CBox> -->
       <CBox
         :w="['100%', '66%']"
         my="3"
@@ -146,7 +146,7 @@
             }"
             :w="{ base: '33%', md: '100%' }"
           >
-            <CHeading>See the Vue</CHeading>
+            <CHeading size="lg">See the Vue</CHeading>
             <CText :mt="4">Vue makes front-end development a breeze.</CText>
           </CBox>
           <CBox
@@ -163,7 +163,7 @@
             }"
             :w="{ base: '33%', md: '100%' }"
           >
-            <CHeading>Go Nuxt!</CHeading>
+            <CHeading size="lg">Go Nuxt!</CHeading>
             <CText :mt="4">Nuxt makes writing Vue even easier.</CText>
           </CBox>
           <CBox
@@ -181,7 +181,7 @@
             :w="{ base: '33%', md: '100%' }"
           >
             <CLink href="/dashboard" pass-href
-              ><CHeading>Go to Dashboard</CHeading></CLink
+              ><CHeading size="lg">Go to Dashboard</CHeading></CLink
             >
             <CText :mt="4">Nuxt makes writing Vue even easier.</CText>
           </CBox>

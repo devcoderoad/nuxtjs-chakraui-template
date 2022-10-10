@@ -17,7 +17,24 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preconnect',
+        hid: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+      },
+      {
+        rel: 'preconnect',
+        hid: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
+      {
+        rel: 'stylesheet',
+        hid: 'font-stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400;700;900&Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -89,6 +106,13 @@ export default {
     },
     // initialColorMode: 'dark',
     extendTheme: {
+      fonts: {
+        heading: '"Poppins", sans-serif',
+        body: '"Playfair+Display", system-ui, sans-serif',
+        mono: 'Menlo, monospace',
+        // font-family: 'Playfair+Display', sans-serif;
+        // font-family: 'Poppins', sans-serif;
+      },
       // Customize your Chakra UI component base
       baseStyles: {
         CButton: {
