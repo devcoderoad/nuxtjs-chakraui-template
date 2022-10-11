@@ -47,7 +47,7 @@ export default {
           color: 'whiteAlpha.900',
           // h: ['100%', '100vh'],
         },
-        width: ['lg'],
+        // width: ['xl'],
       },
     }
   },

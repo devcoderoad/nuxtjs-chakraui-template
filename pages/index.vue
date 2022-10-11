@@ -1,10 +1,42 @@
 <template>
-  <CBox>
+  <CBox d="block" pos="relative">
     <!-- <CHeading text-align="center" mb="4"> ⚡️ Hello chakra-ui/vue </CHeading> -->
-    <CFlex justify="center" direction="column" align="center" flexWrap="wrap">
-      <CBox my="3">
-        <img :src="logo" width="170" alt="Logo" />
+    <CBox
+      as="section"
+      d="block"
+      pos="relative"
+      textShadow="2px 2px 0px #ffffff"
+    >
+      <CBox
+        d="block"
+        w="100%"
+        h="100vh"
+        bgImage="https://images.unsplash.com/photo-1546379753-abb7fd8cfb93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=980&q=80"
+        bgRepeat="no-repeat"
+        bgPosition="top center"
+        bgSize="cover"
+        pos="relative"
+      >
+        <CBox
+          d="block"
+          mx="auto"
+          pos="absolute"
+          bottom="10"
+          zIndex="2"
+          textAlign="center"
+          w="full"
+        >
+          <CHeading textAlign="center">Latte One Brewd</CHeading>
+        </CBox>
       </CBox>
+    </CBox>
+    <CFlex
+      justify="center"
+      direction="column"
+      align="center"
+      flex="wrap"
+      my="12"
+    >
       <CBox
         :w="['100%', '66%']"
         my="3"
@@ -110,7 +142,7 @@
           textAlign="center"
           pos="relative"
           :_before="{
-            content: '\' \'',
+            content: '\'\'',
             position: 'absolute',
             width: '10%',
             height: '3px',

@@ -107,7 +107,7 @@ export default {
     // initialColorMode: 'dark',
     extendTheme: {
       fonts: {
-        heading: '"Poppins", sans-serif',
+        heading: '"Playfair Display", sans-serif',
         body: '"Work Sans", system-ui, sans-serif',
         mono: 'Menlo, monospace',
         // font-family: 'Playfair Display', sans-serif;
