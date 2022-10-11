@@ -28,11 +28,11 @@
 /* color modes */
 body[class='theme--light'],
 body[class='theme--dark'] {
+  /* position: relative; */
   background-position: bottom;
   background-repeat: repeat-x;
   background-size: contain;
 }
-
 body[class='theme--light'] {
   background-color: transparent;
   background-image: url('/svg/wave.svg');

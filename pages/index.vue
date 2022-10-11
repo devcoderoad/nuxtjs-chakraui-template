@@ -1,10 +1,10 @@
 <template>
   <CBox>
     <!-- <CHeading text-align="center" mb="4"> ⚡️ Hello chakra-ui/vue </CHeading> -->
-    <CFlex justify="center" direction="column" align="center">
-      <!-- <CBox my="3">
-        <img :src="logo" width="100px" alt="Alternative" />
-      </CBox> -->
+    <CFlex justify="center" direction="column" align="center" flexWrap="wrap">
+      <CBox my="3">
+        <img :src="logo" width="170" alt="Logo" />
+      </CBox>
       <CBox
         :w="['100%', '66%']"
         my="3"
@@ -13,8 +13,8 @@
         pos="relative"
       >
         <CBox>
-          <CHeading>Welcome to NuxtCha ⚡️ </CHeading>
-          <CText as="p" color="gray.500">
+          <CHeading>Welcome to COFFD ⚡️ </CHeading>
+          <CText as="p">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             expedita earum, dolor culpa ullam ut, molestias nesciunt, atque aut
             vero voluptatem. Fugiat est deleniti natus aspernatur ipsa laborum
@@ -104,6 +104,44 @@
       >
         Delete Account
       </CButton>
+      <CBox my="8" py="8">
+        <CHeading
+          size="xl"
+          textAlign="center"
+          pos="relative"
+          :_before="{
+            content: '\' \'',
+            position: 'absolute',
+            width: '10%',
+            height: '3px',
+            bgColor: '#836940',
+            bottom: '-12px',
+            zIndex: 1,
+          }"
+          >Responsive Brewd Latte</CHeading
+        >
+        <MCardOffset />
+      </CBox>
+      <CBox
+        h="100%"
+        my="24"
+        w="full"
+        overflow="hidden"
+        justify="center"
+        align="center"
+        bgImg="https://images.unsplash.com/photo-1618105965240-9aa565e73a0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=1152&q=80"
+      >
+        <CBox :w="['xl']" m="0" py="12">
+          <CHeading size="md" mx="auto" color="whiteAlpha.800"
+            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea,
+            soluta? Quam tenetur, fugit voluptatibus dignissimos nulla ipsa cum
+            quasi enim rerum debitis? Qui provident corrupti praesentium eum ab
+            consequatur sapiente molestias, architecto natus iste sit
+            dignissimos aut? Ab provident maiores voluptate quas laboriosam
+            cupiditate ipsa.</CHeading
+          >
+        </CBox>
+      </CBox>
       <CModal :is-open="showModal">
         <CModalOverlay />
         <CModalContent>
@@ -122,71 +160,6 @@
           <CModalCloseButton @click="showModal = false" />
         </CModalContent>
       </CModal>
-      <CBox
-        d="flex"
-        wrap
-        direction="row"
-        justify-content="center"
-        justify="center"
-        mx="auto"
-        mt="12"
-      >
-        <CStack spacing="5" is-inline>
-          <CBox
-            :p="5"
-            shadow="xl"
-            :bgColor="
-              colorMode === 'light' ? 'whiteAlpha.700' : 'blackAlpha.300'
-            "
-            border-width="1px"
-            border-radius="10"
-            :_hover="{
-              bg: colorMode === 'light' ? 'gray.100' : 'gray.800',
-              shadow: 'lg',
-            }"
-            :w="{ base: '33%', md: '100%' }"
-          >
-            <CHeading size="lg">See the Vue</CHeading>
-            <CText :mt="4">Vue makes front-end development a breeze.</CText>
-          </CBox>
-          <CBox
-            :p="5"
-            shadow="xl"
-            :bgColor="
-              colorMode === 'light' ? 'whiteAlpha.700' : 'blackAlpha.300'
-            "
-            border-width="1px"
-            border-radius="10"
-            :_hover="{
-              bg: colorMode === 'light' ? 'gray.100' : 'gray.800',
-              shadow: 'lg',
-            }"
-            :w="{ base: '33%', md: '100%' }"
-          >
-            <CHeading size="lg">Go Nuxt!</CHeading>
-            <CText :mt="4">Nuxt makes writing Vue even easier.</CText>
-          </CBox>
-          <CBox
-            :p="5"
-            shadow="xl"
-            :bgColor="
-              colorMode === 'light' ? 'whiteAlpha.700' : 'blackAlpha.300'
-            "
-            border-width="1px"
-            border-radius="10"
-            :_hover="{
-              bg: colorMode === 'light' ? 'gray.100' : 'gray.800',
-              shadow: 'lg',
-            }"
-            :w="{ base: '33%', md: '100%' }"
-          >
-            <CLink href="/dashboard" pass-href
-              ><CHeading size="lg">Go to Dashboard</CHeading></CLink
-            >
-            <CText :mt="4">Nuxt makes writing Vue even easier.</CText>
-          </CBox>
-        </CStack>
-      </CBox>
     </CFlex>
   </CBox>
 </template>
@@ -195,6 +168,7 @@
 import {
   CBox,
   CButton,
+  // CTag,
   // CAvatarGroup,
   // CAvatar,
   // CAvatarBadge,
@@ -207,12 +181,14 @@ import {
   CModalCloseButton,
   CIconButton,
   CFlex,
-  CStack,
+  // CStack,
   CHeading,
   CText,
-  CLink,
+  // CLink,
 } from '@chakra-ui/vue'
 
+/* Components */
+import MCardOffset from '@/components/card/MOffset.vue'
 import logo from '@/static/logo.svg'
 
 export default {
@@ -220,6 +196,7 @@ export default {
   components: {
     CBox,
     CButton,
+    // CTag,
     // CAvatarGroup,
     // CAvatar,
     // CAvatarBadge,
@@ -232,10 +209,11 @@ export default {
     CModalCloseButton,
     CIconButton,
     CFlex,
-    CStack,
+    // CStack,
     CHeading,
     CText,
-    CLink,
+    // CLink,
+    MCardOffset,
   },
   inject: ['$chakraColorMode', '$toggleColorMode'],
   layout: 'default',

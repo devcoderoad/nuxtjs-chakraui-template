@@ -4,6 +4,7 @@
     <CColorModeProvider>
       <CBox v-bind="mainStyles[colorMode]">
         <MSeoHead />
+        <MNavBarDefault />
         <Nuxt />
       </CBox>
     </CColorModeProvider>
@@ -18,7 +19,9 @@ import {
   CBox,
 } from '@chakra-ui/vue'
 
+/* Components */
 import MSeoHead from '@/components/SeoHead'
+import MNavBarDefault from '@/components/navbar/MDefault'
 
 export default {
   name: 'DefaultLayout',
@@ -27,7 +30,9 @@ export default {
     CColorModeProvider,
     CReset,
     CBox,
+    /* Main components */
     MSeoHead,
+    MNavBarDefault,
   },
   data() {
     return {
@@ -35,13 +40,14 @@ export default {
         light: {
           bg: 'tranparent',
           color: 'gray.900',
-          h: ['100%', '100vh'],
+          // h: ['100%', '100vh'],
         },
         dark: {
           bg: 'gray.700',
           color: 'whiteAlpha.900',
-          h: ['100%', '100vh'],
+          // h: ['100%', '100vh'],
         },
+        width: ['lg'],
       },
     }
   },
