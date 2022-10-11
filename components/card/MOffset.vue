@@ -69,7 +69,7 @@
               :src="item.image"
             />
           </CBox>
-          <CBox :width="{ md: '100%', xl: '60%' }" ml="4">
+          <CBox :width="{ md: '100%', xl: '60%' }" :ml="[4, 0, 0, 6]">
             <CHeading size="lg" mb="3" :mt="[2, 4, 4, 0]">{{
               item.title
             }}</CHeading>
@@ -97,12 +97,7 @@
               {{ item.category }}
             </a>
             <CText as="p" :my="4" size="md">{{ item.subTitle }} </CText>
-            <CHeading size="lg" textAlign="left"
-              >${{ item.price }}
-              <!-- <CBadge mx="1" px="1" variant-color="green">{{
-                item.category
-              }}</CBadge> -->
-            </CHeading>
+            <CHeading size="lg" textAlign="left">${{ item.price }} </CHeading>
           </CBox>
         </CFlex>
         <CStack
