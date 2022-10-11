@@ -26,6 +26,7 @@
         variant="ghost"
         ariaLabel="Open"
         bgColor="blackAlpha.100"
+        :d="['block', 'none']"
       />
       <CImage :src="logo" h="34px" alt="Logo" mr="auto" ml="6" mt="1" />
       <CFlex

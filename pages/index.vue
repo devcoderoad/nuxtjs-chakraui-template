@@ -1,17 +1,11 @@
 <template>
   <CBox d="block" pos="relative">
-    <!-- <CHeading text-align="center" mb="4"> ⚡️ Hello chakra-ui/vue </CHeading> -->
-    <CBox
-      as="section"
-      d="block"
-      pos="relative"
-      textShadow="2px 2px 0px #ffffff"
-    >
+    <CBox as="section" d="block" pos="relative">
       <CBox
         d="block"
         w="100%"
         h="100vh"
-        bgImage="https://images.unsplash.com/photo-1546379753-abb7fd8cfb93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=980&q=80"
+        bgImage="https://images.unsplash.com/photo-1546379753-abb7fd8cfb93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=920&q=80"
         bgRepeat="no-repeat"
         bgPosition="top center"
         bgSize="cover"
@@ -22,11 +16,22 @@
           mx="auto"
           pos="absolute"
           bottom="10"
+          right="10"
           zIndex="2"
-          textAlign="center"
+          textAlign="right"
           w="full"
         >
-          <CHeading textAlign="center">Latte One Brewd</CHeading>
+          <CHeading mb="4" color="white" size="2xl" m="0" p="0">
+            ⚡️ Hello chakra-ui/vue
+          </CHeading>
+          <CHeading size="xl" color="white" m="0" p="0"
+            >Latte One Brewd</CHeading
+          >
+          <CText color="white">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad vero
+            adipisci odit voluptates deleniti! Aliquam quod nisi facilis illo,
+            deleniti sed vel.
+          </CText>
         </CBox>
       </CBox>
     </CBox>
