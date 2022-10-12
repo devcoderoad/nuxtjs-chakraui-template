@@ -41,7 +41,8 @@
             d: 'block',
             transition: 'all .25s ease',
             color: 'var(--colors-primary)',
-            textShadow: '1px 1px var(--colors--white)',
+            fontWeight: 'bold',
+            fontSize: ['.77rem', '.88rem'],
             _before: {
               transition: 'all .25s ease',
               content: '\' \'',
@@ -68,35 +69,81 @@
         isInline
         mt="0"
         as="nav"
-        :fontSize="['1rem', '1.15rem']"
-        fontWeight="bold"
       >
-        <CLink
-          :textAlign="[{ base: 'center', md: 'left' }]"
-          fontFamily="heading"
-          :mx="[2, 3, 6]"
-        >
+        <CLink :textAlign="[{ base: 'center', md: 'left' }]" :mx="[2, 3, 6]">
           About
         </CLink>
-        <CLink
-          :textAlign="[{ base: 'center', md: 'left' }]"
-          fontFamily="heading"
-          :mx="[2, 3, 6]"
-        >
-          Product
-        </CLink>
-        <CLink
-          :textAlign="[{ base: 'center', md: 'left' }]"
-          fontFamily="heading"
-          :mx="[2, 3, 6]"
-        >
+        <!-- <CMenu>
+          <CMenuButton
+            right-icon="chevron-down"
+            p="0"
+            m="0"
+            pos="relative"
+            d="block"
+            outline="0"
+            color="var(--colors-primary)"
+            textShadow="1px 1px var(--colors--white)"
+            fontWeight="bold"
+            border="0"
+            rounded="0"
+            :fontSize="['.77rem', '.88rem']"
+            :_hover="{ bg: 'none' }"
+            :_focus="{ bg: 'none' }"
+            :_active="{ bg: 'none' }"
+            bg="transparent"
+            >Product</CMenuButton
+          >
+          <CMenuList>
+            <CMenuItem>Download</CMenuItem>
+            <CMenuItem>Create a Copy</CMenuItem>
+            <CMenuItem>Mark as Draft</CMenuItem>
+            <CMenuItem>Delete</CMenuItem>
+            <CMenuItem> Attend a Workshop </CMenuItem>
+          </CMenuList>
+        </CMenu> -->
+        <c-popover trigger="hover">
+          <c-popover-trigger>
+            <c-link
+              text-decoration="none"
+              font-weight="bold"
+              color="blue.500"
+              :textAlign="[{ base: 'center', md: 'left' }]"
+              :mx="[2, 3, 6]"
+            >
+              Product
+            </c-link>
+          </c-popover-trigger>
+          <c-dark-mode>
+            <c-popover-content
+              border="0"
+              zIndex="4"
+              width="400px"
+              color="white"
+              rounded="lg"
+            >
+              <c-box p="5">
+                <c-avatar
+                  name="swyx"
+                  src="https://pbs.twimg.com/profile_images/1201029434054041606/efWs7Lr9_400x400.jpg"
+                />
+                <c-text mt="4" fontWeight="bold">
+                  swyx
+                  <c-badge ml="3" variant="solid" font-size="xs">
+                    Follows you
+                  </c-badge>
+                </c-text>
+                <c-text mt="3">
+                  Infinite Builder working on DX @Netlify. Helping people
+                  #LearnInPublic
+                </c-text>
+              </c-box>
+            </c-popover-content>
+          </c-dark-mode>
+        </c-popover>
+        <CLink :textAlign="[{ base: 'center', md: 'left' }]" :mx="[2, 3, 6]">
           Merch
         </CLink>
-        <CLink
-          :textAlign="[{ base: 'center', md: 'left' }]"
-          fontFamily="heading"
-          :mx="[2, 3, 6]"
-        >
+        <CLink :textAlign="[{ base: 'center', md: 'left' }]" :mx="[2, 3, 6]">
           Contact
         </CLink>
       </CFlex>
@@ -112,6 +159,10 @@ import {
   CFlex,
   CImage,
   CIconButton,
+  // CMenu,
+  // CMenuButton,
+  // CMenuList,
+  // CMenuItem,
   // CText,
   CLink /* , CIcon */,
 } from '@chakra-ui/vue'
@@ -125,7 +176,16 @@ import logo from '@/static/logo.svg'
 
 export default {
   name: 'MDefault',
-  components: { CFlex, CImage, CIconButton, CLink /* CText, */ /* , CIcon */ },
+  components: {
+    CFlex,
+    CImage,
+    CIconButton,
+    // CMenu,
+    // CMenuButton,
+    // CMenuList,
+    // CMenuItem,
+    CLink /* CText, */ /* , CIcon */,
+  },
   props: {},
   data() {
     return { logo }
