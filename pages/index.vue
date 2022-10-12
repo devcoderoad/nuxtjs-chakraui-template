@@ -23,7 +23,7 @@
           display: 'block',
           pointerEvents: 'none',
           overflow: 'hidden',
-          bgColor: 'rgba(0, 0, 0, 0.35)',
+          // bgColor: 'rgba(0, 0, 0, 0.35)',
         }"
       >
         <CBox

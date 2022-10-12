@@ -70,9 +70,12 @@
             />
           </CBox>
           <CBox :width="{ md: '100%', xl: '60%' }" :ml="[4, 0, 0, 6]">
-            <CHeading size="lg" mb="3" :mt="[2, 4, 4, 0]">{{
-              item.title
-            }}</CHeading>
+            <CHeading
+              :fontSize="['md', 'lg', 'lg', 'xl']"
+              mb="3"
+              :mt="[2, 4, 4, 0]"
+              >{{ item.title }}</CHeading
+            >
             <a
               v-chakra="{
                 color: 'var(--color-primary)',
@@ -142,8 +145,6 @@ import {
   CHeading,
   CText,
   CIcon,
-  // CBadge,
-  // CLink,
 } from '@chakra-ui/vue'
 
 export default {
@@ -157,7 +158,6 @@ export default {
     CHeading,
     CText,
     CIcon,
-    // CBadge,
   },
   data() {
     return {

@@ -6,6 +6,7 @@
         <MSeoHead />
         <MNavBarDefault />
         <Nuxt />
+        <MBackToTop />
       </CBox>
     </CColorModeProvider>
   </CThemeProvider>
@@ -22,6 +23,7 @@ import {
 /* Components */
 import MSeoHead from '@/components/SeoHead'
 import MNavBarDefault from '@/components/navbar/MDefault'
+import MBackToTop from '@/components/BackToTop'
 
 export default {
   name: 'DefaultLayout',
@@ -33,6 +35,7 @@ export default {
     /* Main components */
     MSeoHead,
     MNavBarDefault,
+    MBackToTop,
   },
   data() {
     return {
