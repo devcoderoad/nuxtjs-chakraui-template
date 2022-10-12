@@ -4,16 +4,21 @@
     justify="center"
     mx="auto"
     border-color="gray.400"
-    color="gray.600"
     bgColor="transparent"
+    bg="linear-gradient(to bottom, rgb(201 201 201 / 45%), rgba(50, 55, 59, 0)) !important;"
     p="3"
-    :w="{ base: 'full', md: '70%' }"
     pos="fixed"
-    zIndex="1"
+    top="0"
+    left="0"
+    right="0"
+    zIndex="3"
     @scroll="onScroll"
   >
     <CFlex
-      width="full"
+      :w="{
+        md: 'var(--sizes-containers-sm)',
+        xl: 'var(--sizes-containers-xl)',
+      }"
       flex="wrap"
       :display="{ base: 'flex' }"
       mx="auto"
@@ -35,6 +40,8 @@
             pos: 'relative',
             d: 'block',
             transition: 'all .25s ease',
+            color: 'var(--colors-primary)',
+            textShadow: '1px 1px var(--colors--white)',
             _before: {
               transition: 'all .25s ease',
               content: '\' \'',
@@ -67,7 +74,6 @@
         <CLink
           :textAlign="[{ base: 'center', md: 'left' }]"
           fontFamily="heading"
-          color="gray.800"
           :mx="[2, 3, 6]"
         >
           About
@@ -75,7 +81,6 @@
         <CLink
           :textAlign="[{ base: 'center', md: 'left' }]"
           fontFamily="heading"
-          color="gray.800"
           :mx="[2, 3, 6]"
         >
           Product
@@ -83,7 +88,6 @@
         <CLink
           :textAlign="[{ base: 'center', md: 'left' }]"
           fontFamily="heading"
-          color="gray.800"
           :mx="[2, 3, 6]"
         >
           Merch
@@ -91,7 +95,6 @@
         <CLink
           :textAlign="[{ base: 'center', md: 'left' }]"
           fontFamily="heading"
-          color="gray.800"
           :mx="[2, 3, 6]"
         >
           Contact

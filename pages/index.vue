@@ -10,6 +10,21 @@
         bgPosition="top center"
         bgSize="cover"
         pos="relative"
+        :_before="{
+          content: '\' \'',
+          position: 'absolute',
+          zIndex: 0,
+          top: 0,
+          right: 0,
+          bottom: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+          display: 'block',
+          pointerEvents: 'none',
+          overflow: 'hidden',
+          bgColor: 'rgba(0, 0, 0, 0.35)',
+        }"
       >
         <CBox
           d="block"
@@ -17,9 +32,13 @@
           pos="absolute"
           bottom="10"
           right="10"
+          left="0"
           zIndex="2"
           textAlign="right"
-          w="full"
+          :w="{
+            md: 'var(--sizes-containers-sm)',
+            xl: 'var(--sizes-containers-xl)',
+          }"
         >
           <CHeading mb="4" color="white" size="2xl" m="0" p="0">
             ⚡️ Hello chakra-ui/vue
@@ -141,7 +160,14 @@
       >
         Delete Account
       </CButton>
-      <CBox my="8" py="8">
+      <CBox
+        my="8"
+        py="8"
+        :w="{
+          md: 'var(--sizes-containers-sm)',
+          xl: 'var(--sizes-containers-xl)',
+        }"
+      >
         <CHeading
           size="xl"
           textAlign="center"

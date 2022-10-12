@@ -75,7 +75,7 @@
             }}</CHeading>
             <a
               v-chakra="{
-                color: '#836940',
+                color: 'var(--color-primary)',
                 fontSize: '.78rem',
                 fontWeight: 'bold',
                 textTransform: 'uppercase',
@@ -84,7 +84,7 @@
                 py: 1,
                 rounded: 'full',
                 _hover: {
-                  bgColor: '#836940',
+                  bgColor: 'var(--color-primary)',
                   color: 'white',
                   svg: {
                     color: 'white',
@@ -93,7 +93,11 @@
               }"
               href="#"
             >
-              <CIcon aria-label="Search database" name="tag" color="#836940" />
+              <CIcon
+                aria-label="Search database"
+                name="tag"
+                color="var(--color-primary)"
+              />
               {{ item.category }}
             </a>
             <CText as="p" :my="4" size="md">{{ item.subTitle }} </CText>
