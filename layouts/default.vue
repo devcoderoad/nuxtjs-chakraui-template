@@ -2,7 +2,7 @@
   <CThemeProvider>
     <CReset />
     <CColorModeProvider>
-      <CBox v-bind="mainStyles[colorMode]">
+      <CBox as="main" role="layout" v-bind="mainStyles[colorMode]">
         <MSeoHead />
         <MNavBarDefault />
         <Nuxt />

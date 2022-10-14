@@ -8,7 +8,7 @@
     placement="left"
   >
     <CDrawerOverlay />
-    <CDrawerContent w="full">
+    <CDrawerContent v-chakra="{ zIndex: 3333 }" w="full">
       <CDrawerBody style="overflow: hidden">
         <CBox
           h="full"

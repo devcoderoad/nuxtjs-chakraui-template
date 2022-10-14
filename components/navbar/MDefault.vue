@@ -16,23 +16,14 @@
   >
     <CFlex
       :w="{
-        md: 'var(--sizes-containers-sm)',
-        xl: 'var(--sizes-containers-xl)',
+        sm: 'var(--sizes-containers-xl)',
+        lg: 'var(--sizes-containers-xl)',
       }"
       flex="wrap"
       :display="{ base: 'flex' }"
       mx="auto"
       justify="center"
     >
-      <CIconButton
-        :onClick="onToggle"
-        icon="bars"
-        isOpen
-        variant="ghost"
-        ariaLabel="Open"
-        bgColor="blackAlpha.100"
-        :d="['block', 'none']"
-      />
       <CImage :src="logo" h="34px" alt="Logo" mr="auto" ml="6" mt="1" />
       <CFlex
         v-chakra="{
@@ -66,43 +57,15 @@
             },
           },
         }"
-        isInline
         mt="0"
         as="nav"
+        :display="['none', 'flex']"
       >
         <CLink :textAlign="[{ base: 'center', md: 'left' }]" :mx="[2, 3, 6]">
           About
         </CLink>
-        <!-- <CMenu>
-          <CMenuButton
-            right-icon="chevron-down"
-            p="0"
-            m="0"
-            pos="relative"
-            d="block"
-            outline="0"
-            color="var(--colors-primary)"
-            textShadow="1px 1px var(--colors--white)"
-            fontWeight="bold"
-            border="0"
-            rounded="0"
-            :fontSize="['.77rem', '.88rem']"
-            :_hover="{ bg: 'none' }"
-            :_focus="{ bg: 'none' }"
-            :_active="{ bg: 'none' }"
-            bg="transparent"
-            >Product</CMenuButton
-          >
-          <CMenuList>
-            <CMenuItem>Download</CMenuItem>
-            <CMenuItem>Create a Copy</CMenuItem>
-            <CMenuItem>Mark as Draft</CMenuItem>
-            <CMenuItem>Delete</CMenuItem>
-            <CMenuItem> Attend a Workshop </CMenuItem>
-          </CMenuList>
-        </CMenu> -->
-        <c-popover trigger="hover">
-          <c-popover-trigger>
+        <CPopover trigger="hover">
+          <CPopoverTrigger>
             <c-link
               text-decoration="none"
               font-weight="bold"
@@ -112,34 +75,32 @@
             >
               Product
             </c-link>
-          </c-popover-trigger>
-          <c-dark-mode>
-            <c-popover-content
-              border="0"
+          </CPopoverTrigger>
+          <CLightMode>
+            <CPopoverContent
+              shadow="2xl"
               zIndex="4"
               width="400px"
-              color="white"
+              color="primary"
               rounded="lg"
+              :_focus="{ outline: 'none' }"
             >
-              <c-box p="5">
-                <c-avatar
-                  name="swyx"
-                  src="https://pbs.twimg.com/profile_images/1201029434054041606/efWs7Lr9_400x400.jpg"
-                />
-                <c-text mt="4" fontWeight="bold">
+              <CPopoverArrow />
+              <CBox p="5">
+                <CText mt="2" fontWeight="bold">
                   swyx
                   <c-badge ml="3" variant="solid" font-size="xs">
                     Follows you
                   </c-badge>
-                </c-text>
-                <c-text mt="3">
+                </CText>
+                <CText mt="3">
                   Infinite Builder working on DX @Netlify. Helping people
                   #LearnInPublic
-                </c-text>
-              </c-box>
-            </c-popover-content>
-          </c-dark-mode>
-        </c-popover>
+                </CText>
+              </CBox>
+            </CPopoverContent>
+          </CLightMode>
+        </CPopover>
         <CLink :textAlign="[{ base: 'center', md: 'left' }]" :mx="[2, 3, 6]">
           Merch
         </CLink>
@@ -147,51 +108,115 @@
           Contact
         </CLink>
       </CFlex>
-      <CFlex :display="{ base: 'none', md: 'flex' }" ml="10">
-        <!-- <DesktopNav /> -->
-        Desktop Nav
+      <CFlex :display="['block', 'none']">
+        <!-- <CDrawer
+          :auto-focus="false"
+          :isOpen="isOpenDrawer"
+          :onOverlayClick="isOpenDrawer"
+          :initialFocusRef="() => $refs.inputInsideModal"
+          placement="left"
+          zIndex="111111"
+        >
+          <CDrawerOverlay />
+          <CDrawerContent zIndex="111111">
+            <CDrawerCloseButton />
+
+            <CDrawerHeader>
+              <CHeading>Navigation</CHeading>
+            </CDrawerHeader>
+
+            <CDrawerBody>
+              <CFlex is-inline>
+                <Ctext>Menu One</Ctext>
+                <Ctext>Menu One</Ctext>
+                <Ctext>Menu One</Ctext>
+                <Ctext>Menu One</Ctext>
+                <Ctext>Menu One</Ctext>
+              </CFlex>
+            </CDrawerBody>
+
+            <CDrawerFooter>
+              <CText size="md" color="primary">Copyright 2002</CText>
+            </CDrawerFooter>
+          </CDrawerContent>
+        </CDrawer> -->
+        <MDrawer
+          :isOpen="isDrawerOpen"
+          :onOpen="onMobileOpen"
+          @toggleDrawer="toggleDrawer"
+        />
       </CFlex>
+      <CIconButton
+        icon="bars"
+        variant="ghost"
+        ariaLabel="Open"
+        bgColor="blackAlpha.100"
+        :d="['block', 'none']"
+        @click="toggleDrawer"
+      />
     </CFlex>
   </CFlex>
 </template>
 <script>
 import {
   CFlex,
+  // CDrawer,
+  // CDrawerBody,
+  // CDrawerFooter,
+  // CDrawerHeader,
+  // CDrawerOverlay,
+  // CDrawerContent,
+  // CDrawerCloseButton,
+  CPopover,
+  CPopoverTrigger,
+  CPopoverContent,
+  CPopoverArrow,
   CImage,
   CIconButton,
-  // CMenu,
-  // CMenuButton,
-  // CMenuList,
-  // CMenuItem,
-  // CText,
-  CLink /* , CIcon */,
+  CText,
+  CLink,
+  CLightMode,
 } from '@chakra-ui/vue'
-// import {
-//   HamburgerIcon,
-//   CloseIcon,
-//   ChevronDownIcon,
-//   ChevronRightIcon,
-// } from '@chakra-ui/icons'
+
+/* Main Components */
+import MDrawer from '../drawer/MDrawer.vue'
+
 import logo from '@/static/logo.svg'
 
 export default {
   name: 'MDefault',
   components: {
     CFlex,
+    // CDrawer,
+    // CDrawerBody,
+    // CDrawerFooter,
+    // CDrawerHeader,
+    // CDrawerOverlay,
+    // CDrawerContent,
+    // CDrawerCloseButton,
+    CPopover,
+    CPopoverTrigger,
+    CPopoverContent,
+    CPopoverArrow,
     CImage,
     CIconButton,
-    // CMenu,
-    // CMenuButton,
-    // CMenuList,
-    // CMenuItem,
-    CLink /* CText, */ /* , CIcon */,
+    CLink,
+    CText,
+    CLightMode,
+    MDrawer,
   },
   props: {},
   data() {
-    return { logo }
+    return { logo, onMobileOpen: false, isDrawerOpen: false }
   },
   methods: {
-    onToggle() {},
+    toggleDrawer() {
+      const vm = this
+      return (vm.isDrawerOpen = !vm.isDrawerOpen)
+    },
+    // onToggle() {
+    //   return (this.isOpenDrawer = !this.isOpenDrawer)
+    // },
     onScroll(e) {
       return console.log(e)
     },
