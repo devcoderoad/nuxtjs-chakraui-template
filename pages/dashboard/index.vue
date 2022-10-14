@@ -395,7 +395,9 @@
     <MAlert
       mode="warning"
       title="Privacy Policy"
-      description="We use cookies in our website, please do accept cookies from our website to experience more advanced features."
+      description="We use cookies in
+    our website, please do accept cookies from our website to experience more
+    advanced features."
       :position="{ position: 'fixed', bottom: 0, left: 0, right: 0 }"
     />
     <MToast

@@ -10,10 +10,10 @@
         bgPosition="top center"
         bgSize="cover"
         pos="relative"
+        zIndex="0"
         :_before="{
           content: '\' \'',
           position: 'absolute',
-          zIndex: 0,
           top: 0,
           right: 0,
           bottom: 0,
@@ -33,7 +33,7 @@
           bottom="10"
           right="10"
           left="0"
-          zIndex="2"
+          zIndex="1"
           textAlign="right"
           :w="{
             md: 'var(--sizes-containers-sm)',

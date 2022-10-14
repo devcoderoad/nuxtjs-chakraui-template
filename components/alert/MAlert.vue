@@ -1,7 +1,11 @@
 <template>
   <CAlert
     :status="mode"
-    v-bind="{ ...position, ...(showAlert ? { d: 'flex' } : { d: 'none' }) }"
+    v-bind="{
+      ...position,
+      ...(showAlert ? { d: 'flex' } : { d: 'none' }),
+      ...rest,
+    }"
     h="60px"
   >
     <CAlertIcon />
@@ -50,6 +54,12 @@ export default {
       type: Object,
       default: () => {
         return { position: 'relative', bottom: 0 }
+      },
+    },
+    rest: {
+      type: Object,
+      default: () => {
+        return {}
       },
     },
   },

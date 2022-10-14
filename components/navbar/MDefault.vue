@@ -1,17 +1,19 @@
 <template>
+  <!-- <CFlex bg="linear-gradient(to bottom, rgb(201 201 201 / 45%), rgba(50, 55, 59, 0)) !important;" -->
   <CFlex
     alignItems="center"
     justify="center"
     mx="auto"
-    bgColor="transparent"
-    bg="linear-gradient(to bottom, rgb(201 201 201 / 45%), rgba(50, 55, 59, 0)) !important;"
+    bgColor="rgba(255, 255, 255, 0.75)"
+    backdropFilter="saturate(180%) blur(10px)"
+    shadow="sm"
     p="3"
     height="76"
     pos="fixed"
     top="0"
     left="0"
     right="0"
-    zIndex="3"
+    zIndex="1"
     @scroll="onScroll"
   >
     <CFlex
@@ -19,12 +21,14 @@
         sm: 'var(--sizes-containers-xl)',
         lg: 'var(--sizes-containers-xl)',
       }"
-      flex="wrap"
       :display="{ base: 'flex' }"
-      mx="auto"
+      flex="wrap"
       justify="center"
+      mx="auto"
     >
-      <CImage :src="logo" h="34px" alt="Logo" mr="auto" ml="6" mt="1" />
+      <CLink href="/" mr="auto">
+        <CImage :src="logo" h="34px" alt="Logo" mr="auto" ml="6" mt="1" />
+      </CLink>
       <CFlex
         v-chakra="{
           a: {
@@ -57,16 +61,16 @@
             },
           },
         }"
+        :display="['none', 'flex']"
         mt="0"
         as="nav"
-        :display="['none', 'flex']"
       >
         <CLink :textAlign="[{ base: 'center', md: 'left' }]" :mx="[2, 3, 6]">
           About
         </CLink>
         <CPopover trigger="hover">
           <CPopoverTrigger>
-            <c-link
+            <CLink
               text-decoration="none"
               font-weight="bold"
               color="blue.500"
@@ -74,7 +78,7 @@
               :mx="[2, 3, 6]"
             >
               Product
-            </c-link>
+            </CLink>
           </CPopoverTrigger>
           <CLightMode>
             <CPopoverContent
@@ -88,10 +92,15 @@
               <CPopoverArrow />
               <CBox p="5">
                 <CText mt="2" fontWeight="bold">
-                  swyx
-                  <c-badge ml="3" variant="solid" font-size="xs">
-                    Follows you
-                  </c-badge>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis veritatis necessitatibus eius voluptatibus totam
+                  praesentium eos non inventore quidem corporis nulla tempora
+                  voluptatum sint sit dolores, minima, ab laborum odio nesciunt
+                  mollitia. Praesentium?
+                </CText>
+                <CText mt="3">
+                  Infinite Builder working on DX @Netlify. Helping people
+                  #LearnInPublic
                 </CText>
                 <CText mt="3">
                   Infinite Builder working on DX @Netlify. Helping people
@@ -109,37 +118,6 @@
         </CLink>
       </CFlex>
       <CFlex :display="['block', 'none']">
-        <!-- <CDrawer
-          :auto-focus="false"
-          :isOpen="isOpenDrawer"
-          :onOverlayClick="isOpenDrawer"
-          :initialFocusRef="() => $refs.inputInsideModal"
-          placement="left"
-          zIndex="111111"
-        >
-          <CDrawerOverlay />
-          <CDrawerContent zIndex="111111">
-            <CDrawerCloseButton />
-
-            <CDrawerHeader>
-              <CHeading>Navigation</CHeading>
-            </CDrawerHeader>
-
-            <CDrawerBody>
-              <CFlex is-inline>
-                <Ctext>Menu One</Ctext>
-                <Ctext>Menu One</Ctext>
-                <Ctext>Menu One</Ctext>
-                <Ctext>Menu One</Ctext>
-                <Ctext>Menu One</Ctext>
-              </CFlex>
-            </CDrawerBody>
-
-            <CDrawerFooter>
-              <CText size="md" color="primary">Copyright 2002</CText>
-            </CDrawerFooter>
-          </CDrawerContent>
-        </CDrawer> -->
         <MDrawer
           :isOpen="isDrawerOpen"
           :onOpen="onMobileOpen"
