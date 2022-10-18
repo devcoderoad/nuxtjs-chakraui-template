@@ -87,11 +87,11 @@
                 py: 1,
                 rounded: 'full',
                 _hover: {
-                  bgColor: 'var(--color-primary)',
-                  color: 'white',
-                  svg: {
-                    color: 'white',
-                  },
+                  bgColor: 'var(--colors-primary)',
+                  color: 'var(--colors-white)',
+                  // svg: {
+                  //   color: 'white',
+                  // },
                 },
               }"
               href="#"

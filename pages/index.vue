@@ -78,6 +78,9 @@
             nihil, totam necessitatibus velit quidem odio dolorem ad maiores
             fuga.
           </CText>
+          <CHeading mt="4" size="md"
+            ><CLink href="/dashboard">Dashboard</CLink></CHeading
+          >
         </CBox>
         <div
           v-chakra="{

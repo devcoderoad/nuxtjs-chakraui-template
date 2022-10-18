@@ -1,11 +1,12 @@
 <template>
   <CDrawer
+    :key="keyProp"
     :auto-focus="false"
     :isOpen="isOpen"
     :onClose="onCloseDrawer"
     :returnFocusOnClose="false"
     :onOverlayClick="onOverlayClick"
-    placement="left"
+    :placement="placement"
   >
     <CDrawerOverlay />
     <CDrawerContent v-chakra="{ zIndex: 3333 }" w="full">
@@ -106,7 +107,6 @@
 <script>
 import {
   CBox,
-  // CFlex,
   CDrawer,
   CDrawerContent,
   CDrawerBody,
@@ -139,6 +139,14 @@ export default {
   props: {
     isOpen: {
       type: Boolean,
+    },
+    keyProp: {
+      type: String,
+      default: () => 'navigation-top',
+    },
+    placement: {
+      type: String,
+      default: () => 'left',
     },
   },
   data() {

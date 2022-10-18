@@ -1,8 +1,9 @@
 <template>
   <CBox background-color="gray.100" v-bind="mainStyles[colorMode]">
-    <MDrawer
+    <MDrawerDashboard
       :isOpen="isDrawerOpen"
       :onOpen="onMobileOpen"
+      keyProp="navigation-dashboard"
       @toggleDrawer="toggleDrawer"
     />
     <CBox>
@@ -99,12 +100,11 @@ import {
 } from '@chakra-ui/vue'
 
 /* Main Components */
-import MDrawer from '../drawer/MDrawer.vue'
+import MDrawerDashboard from '@/components/drawer/MDrawer.vue'
 
 export default {
   name: 'MDashboard',
   components: {
-    MDrawer,
     CBox,
     CFlex,
     CIconButton,
@@ -115,6 +115,7 @@ export default {
     CMenuButton,
     CAvatar,
     CStack,
+    MDrawerDashboard,
   },
   inject: ['$chakraColorMode', '$toggleColorMode'],
   props: {

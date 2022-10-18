@@ -31,7 +31,6 @@ import {
 /* Components */
 import MSeoHead from '~/components/SeoHead'
 import MDashboard from '~/components/navbar/MDashboard'
-// import MDrawer from '~/components/drawer/MDrawer'
 
 export default {
   name: 'DashboardLayout',
@@ -42,7 +41,6 @@ export default {
     CBox,
     MSeoHead,
     MDashboard,
-    // MDrawer,
   },
   data() {
     return {

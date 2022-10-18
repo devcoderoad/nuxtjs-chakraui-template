@@ -68,7 +68,7 @@
         <CLink :textAlign="[{ base: 'center', md: 'left' }]" :mx="[2, 3, 6]">
           About
         </CLink>
-        <CPopover trigger="hover">
+        <CPopover trigger="hover" placement="top">
           <CPopoverTrigger>
             <CLink
               text-decoration="none"
@@ -121,6 +121,7 @@
         <MDrawer
           :isOpen="isDrawerOpen"
           :onOpen="onMobileOpen"
+          keyProp="navigation-default"
           @toggleDrawer="toggleDrawer"
         />
       </CFlex>
@@ -138,13 +139,6 @@
 <script>
 import {
   CFlex,
-  // CDrawer,
-  // CDrawerBody,
-  // CDrawerFooter,
-  // CDrawerHeader,
-  // CDrawerOverlay,
-  // CDrawerContent,
-  // CDrawerCloseButton,
   CPopover,
   CPopoverTrigger,
   CPopoverContent,
@@ -157,7 +151,7 @@ import {
 } from '@chakra-ui/vue'
 
 /* Main Components */
-import MDrawer from '../drawer/MDrawer.vue'
+import MDrawer from '@/components/drawer/MDrawer.vue'
 
 import logo from '@/static/logo.svg'
 
@@ -165,13 +159,6 @@ export default {
   name: 'MDefault',
   components: {
     CFlex,
-    // CDrawer,
-    // CDrawerBody,
-    // CDrawerFooter,
-    // CDrawerHeader,
-    // CDrawerOverlay,
-    // CDrawerContent,
-    // CDrawerCloseButton,
     CPopover,
     CPopoverTrigger,
     CPopoverContent,
