@@ -191,14 +191,16 @@
       <CBox
         h="100%"
         my="24"
-        w="full"
+        w="100%"
+        mx="auto"
         overflow="hidden"
-        justify="center"
-        align="center"
+        justifyItems="center"
+        alignItems="center"
+        textAlign="center"
         bgImg="https://images.unsplash.com/photo-1618105965240-9aa565e73a0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=1152&q=80"
       >
-        <CBox :w="['xl']" m="0" py="12">
-          <CHeading size="md" mx="auto" color="whiteAlpha.800"
+        <CBox :w="['xl']" m="0" py="12" mx="auto">
+          <CHeading size="md" mx="auto" :my="[5, 10]" color="whiteAlpha.800"
             >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea,
             soluta? Quam tenetur, fugit voluptatibus dignissimos nulla ipsa cum
             quasi enim rerum debitis? Qui provident corrupti praesentium eum ab
@@ -209,69 +211,157 @@
         </CBox>
       </CBox>
       <CBox
+        maxW="100%"
         :w="{
-          md: 'var(--sizes-containers-sm)',
+          base: 'var(--sizes-containers-xl)',
+          md: 'var(--sizes-containers-md)',
+          lg: 'var(--sizes-containers-md)',
           xl: 'var(--sizes-containers-xl)',
         }"
       >
         <CHeading textAlign="center" mx="auto" mb="4"
           >Our Best Seller Products</CHeading
         >
-        <CBox display="flex" my="5" mx="auto">
-          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg">
-            <CHeading size="sm" mb="3"
-              >Lorem ipsum, dolor sit amet consectetur adipisicing
-              elit.</CHeading
+        <CBox
+          display="flex"
+          flexDirection="row"
+          alignItems="stretch"
+          pos="relative"
+          overflow-x="auto"
+          overflow-y="hidden"
+          white-space="wrap"
+        >
+          <CBox my="4" py="2" mx="auto" d="flex">
+            <CBox
+              maxW="xs"
+              minH="160px"
+              display="inline-block"
+              w="xs"
+              p="3"
+              bgColor="white"
+              shadow="md"
+              m="2"
+              rounded="lg"
             >
-            <CBox as="p">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
-              quis cumque, animi pariatur dicta officiis.
+              <CHeading size="sm" mb="3" mt="3"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit.</CHeading
+              >
+              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CBox as="p" fontSize="sm">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Nesciunt quis cumque, animi pariatur dicta officiis.
+              </CBox>
+              <CLink href="#" fontSize="sm" fontWeight="bolder"
+                >visit &raquo;</CLink
+              >
+            </CBox>
+            <CBox
+              maxW="xs"
+              w="xs"
+              p="3"
+              bgColor="white"
+              shadow="md"
+              m="2"
+              rounded="lg"
+              ><CHeading size="sm" mb="3" mt="3"
+                >Deserunt aspernatur dicta distinctio hic quia!</CHeading
+              >
+              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CBox as="p" fontSize="sm"
+                >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Praesentium quas nemo perferendis expedita odit.</CBox
+              >
+              <CLink href="#" fontSize="sm" fontWeight="bolder"
+                >visit &raquo;</CLink
+              >
+            </CBox>
+            <CBox
+              maxW="xs"
+              w="xs"
+              p="3"
+              bgColor="white"
+              shadow="md"
+              m="2"
+              rounded="lg"
+              ><CHeading size="sm" mb="3" mt="3"
+                >Animi velit dolorum est quod facere ab possimus.</CHeading
+              >
+              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CBox as="p" fontSize="sm"
+                >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit,
+                recusandae cumque. Nihil, quidem enim.</CBox
+              >
+              <CLink href="#" fontSize="sm" fontWeight="bolder"
+                >visit &raquo;</CLink
+              >
+            </CBox>
+            <CBox
+              maxW="xs"
+              w="xs"
+              p="3"
+              bgColor="white"
+              shadow="md"
+              m="2"
+              rounded="lg"
+              ><CHeading size="sm" mb="3" mt="3"
+                >Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit.</CHeading
+              >
+              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CBox as="p" fontSize="sm"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                tenetur nesciunt doloribus asperiores quisquam!</CBox
+              >
+              <CLink href="#" fontSize="sm" fontWeight="bolder"
+                >visit &raquo;</CLink
+              >
+            </CBox>
+            <CBox
+              maxW="xs"
+              w="xs"
+              p="3"
+              bgColor="white"
+              shadow="md"
+              m="2"
+              rounded="lg"
+              ><CHeading size="sm" mb="3" mt="3"
+                >Deserunt aspernatur dicta distinctio hic quia!</CHeading
+              >
+              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CBox as="p" fontSize="sm"
+                >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aspernatur facere quaerat cum a provident.</CBox
+              >
+              <CLink href="#" fontSize="sm" fontWeight="bolder"
+                >visit &raquo;</CLink
+              >
+            </CBox>
+            <CBox
+              maxW="xs"
+              w="xs"
+              p="3"
+              bgColor="white"
+              shadow="md"
+              m="2"
+              rounded="lg"
+              ><CHeading size="sm" mb="3" mt="3"
+                >Animi velit dolorum est quod facere ab possimus.</CHeading
+              >
+              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CBox as="p" fontSize="sm"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                nulla tenetur excepturi est eaque?</CBox
+              >
+              <CLink href="#" fontSize="sm" fontWeight="bolder"
+                >visit &raquo;</CLink
+              >
             </CBox>
           </CBox>
-          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg"
-            ><CHeading size="sm" mb="3"
-              >Deserunt aspernatur dicta distinctio hic quia!</CHeading
-            >
-            <CBox as="p"
-              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Praesentium quas nemo perferendis expedita odit.</CBox
-            >
-          </CBox>
-          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg"
-            ><CHeading size="sm" mb="3"
-              >Animi velit dolorum est quod facere ab possimus.</CHeading
-            ><CBox as="p"
-              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit,
-              recusandae cumque. Nihil, quidem enim.</CBox
-            >
-          </CBox>
-          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg"
-            ><CHeading size="sm" mb="3"
-              >Lorem ipsum, dolor sit amet consectetur adipisicing
-              elit.</CHeading
-            ><CBox as="p"
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-              tenetur nesciunt doloribus asperiores quisquam!</CBox
-            >
-          </CBox>
-          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg"
-            ><CHeading size="sm" mb="3"
-              >Deserunt aspernatur dicta distinctio hic quia!</CHeading
-            >
-            <CBox as="p"
-              >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Aspernatur facere quaerat cum a provident.</CBox
-            >
-          </CBox>
-          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg"
-            ><CHeading size="sm" mb="3"
-              >Animi velit dolorum est quod facere ab possimus.</CHeading
-            ><CBox as="p"
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-              nulla tenetur excepturi est eaque?</CBox
-            >
-          </CBox>
         </CBox>
+        <CHeading size="xs" mt="2" textAlign="right"
+          >View all products</CHeading
+        >
       </CBox>
       <CBox
         :w="{
@@ -286,31 +376,104 @@
         <CBox textAlign="center">
           <CHeading size="md"
             >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-            alias laboriosam, nobis totam autem adipisci sed eos possimus
-            consequatur optio recusandae doloribus explicabo a ipsa maiores ut
-            harum, deleniti tenetur et assumenda amet.
+            alias laboriosam, nobis totam autem adipisci sed eos possimus.
           </CHeading>
         </CBox>
       </CBox>
-      <CModal :is-open="showModal">
-        <CModalOverlay />
-        <CModalContent>
-          <CModalHeader>Are you sure?</CModalHeader>
-          <CModalBody>Deleting user cannot be undone</CModalBody>
-          <CModalFooter>
-            <CButton @click="showModal = false"> Cancel </CButton>
-            <CButton
-              margin-left="3"
-              variant-color="red"
-              @click="showModal = false"
-            >
-              Delete User
-            </CButton>
-          </CModalFooter>
-          <CModalCloseButton @click="showModal = false" />
-        </CModalContent>
-      </CModal>
     </CFlex>
+    <CBox
+      as="footer"
+      mx="auto"
+      my="12"
+      pt="4"
+      pb="8"
+      px="4"
+      :width="{
+        xl: 'var(--sizes-containers-xl)',
+      }"
+    >
+      <CFlex
+        v-chakra="{
+          'ul li': {
+            listStyleType: 'none',
+            marginLeft: '0rem',
+          },
+          a: {
+            fontWeight: 'bolder',
+            fontSize: 'sm',
+          },
+        }"
+        mx="auto"
+        justifyContent="space-between"
+        alignItems="center"
+        pos="relative"
+      >
+        <CBox>
+          <CImage src="./logo.svg" alt="Brewd Logo" maxW="170px" />
+          <CFlex>
+            <CInput size="120" my="5" shadow="lg" />
+            <CButton
+              size="sm"
+              variant-color="green"
+              ml="2"
+              shadow="lg"
+              my="5"
+              px="6"
+              >subscribe</CButton
+            ></CFlex
+          >
+          <CBox>
+            <CHeading size="xs">Follow Us</CHeading>
+            <CButton shadow="lg">F</CButton>
+            <CButton shadow="lg">T</CButton>
+            <CButton shadow="lg">P</CButton>
+            <CButton shadow="lg">Y</CButton>
+          </CBox>
+        </CBox>
+        <CBox>
+          <CHeading size="sm" mb="3">About Us</CHeading>
+          <CBox>
+            <ul>
+              <li><CLink href="#heading">Link No 1</CLink></li>
+              <li><CLink href="#heading">Link No 1</CLink></li>
+              <li><CLink href="#heading">Link No 1</CLink></li>
+              <li><CLink href="#heading">Link No 1</CLink></li>
+              <li><CLink href="#heading">Link No 1</CLink></li>
+            </ul>
+          </CBox>
+        </CBox>
+        <CBox>
+          <CHeading size="sm" mb="3">Products</CHeading>
+          <CBox>
+            <ul>
+              <li><CLink href="#heading">Link No 2</CLink></li>
+              <li><CLink href="#heading">Link No 2</CLink></li>
+              <li><CLink href="#heading">Link No 2</CLink></li>
+              <li><CLink href="#heading">Link No 2</CLink></li>
+              <li><CLink href="#heading">Link No 2</CLink></li>
+            </ul>
+          </CBox>
+        </CBox>
+      </CFlex>
+    </CBox>
+    <CModal :is-open="showModal">
+      <CModalOverlay />
+      <CModalContent>
+        <CModalHeader>Are you sure?</CModalHeader>
+        <CModalBody>Deleting user cannot be undone</CModalBody>
+        <CModalFooter>
+          <CButton @click="showModal = false"> Cancel </CButton>
+          <CButton
+            margin-left="3"
+            variant-color="red"
+            @click="showModal = false"
+          >
+            Delete User
+          </CButton>
+        </CModalFooter>
+        <CModalCloseButton @click="showModal = false" />
+      </CModalContent>
+    </CModal>
   </CBox>
 </template>
 
