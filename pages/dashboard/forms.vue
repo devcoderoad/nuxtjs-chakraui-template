@@ -2,8 +2,14 @@
   <CBox as="article">
     <CHeading size="lg" color="primary" mb="6">Forms Page</CHeading>
     <!-- <nuxt-content :document="dashboard" /> -->
-    <CFlex>
-      <Cbox w="md" m="4">
+    <CBox
+      :display="['block', 'flex']"
+      align-items="top"
+      justify-content="space-between"
+      :pt="[2, 4]"
+    >
+      <CBox :w="['100%', '50%']" :mb="[6, 3]" :mr="[2, 5]">
+        <CHeading mb="6">Order Form</CHeading>
         <form>
           <CFormControl>
             <CFormLabel for="email">Full Name</CFormLabel>
@@ -93,25 +99,45 @@
               </CCheckbox>
             </CCheckboxGroup>
           </CFormControl>
+          <CButton variant-color="red" type="submit" mt="4">Order</CButton>
+          <CButton variant-color="red" variant="outline" type="reset" mt="4"
+            >Reset</CButton
+          >
         </form>
-      </Cbox>
-      <CBox w="md" m="4">
+      </CBox>
+      <CBox :w="['100%', '50%']" :mb="[6, 3]" :mr="[2, 5]">
+        <CHeading mb="6">Register Form</CHeading>
         <form>
           <CFormControl>
             <CFormLabel for="fullname">Full Name</CFormLabel>
-            <CInput id="fullname" type="text" name="fullname" />
+            <CInput
+              id="fullname"
+              type="text"
+              name="fullname"
+              placeholder="Full Name"
+            />
           </CFormControl>
           <CFormControl>
             <CFormLabel for="email">Email</CFormLabel>
-            <CInput id="fullname" type="text" name="email" />
+            <CInput
+              id="email"
+              type="text"
+              name="email"
+              placeholder="email@email.com"
+            />
           </CFormControl>
           <CFormControl>
             <CFormLabel for="phone">Phone</CFormLabel>
-            <CInput id="phone" type="text" name="phone" />
+            <CInput id="phone" type="text" name="phone" placeholder="Phone" />
           </CFormControl>
           <CFormControl>
             <CFormLabel for="company">Company</CFormLabel>
-            <CInput id="company" type="text" name="company" />
+            <CInput
+              id="company"
+              type="text"
+              name="company"
+              placeholder="Company"
+            />
           </CFormControl>
           <CFormControl>
             <CFormLabel for="address">Address</CFormLabel>
@@ -122,16 +148,19 @@
               placeholder="Your address"
             />
           </CFormControl>
-          <CButton type="submit" color="red" mt="4">Submit</CButton>
+          <CButton variant-color="green" type="submit" mt="4">Submit</CButton>
+          <CButton variant-color="green" variant="outline" type="reset" mt="4"
+            >Reset</CButton
+          >
         </form>
       </CBox>
-    </CFlex>
+    </CBox>
   </CBox>
 </template>
 
 <script>
 import {
-  CFlex,
+  // CFlex,
   CBox,
   CHeading,
   CButton,
@@ -153,7 +182,7 @@ import MCustomRadio from '@/components/form/MCustomRadio'
 export default {
   name: 'DashboardTables',
   components: {
-    CFlex,
+    // CFlex,
     CBox,
     CHeading,
     CButton,

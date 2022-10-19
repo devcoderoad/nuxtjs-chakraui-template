@@ -208,6 +208,90 @@
           >
         </CBox>
       </CBox>
+      <CBox
+        :w="{
+          md: 'var(--sizes-containers-sm)',
+          xl: 'var(--sizes-containers-xl)',
+        }"
+      >
+        <CHeading textAlign="center" mx="auto" mb="4"
+          >Our Best Seller Products</CHeading
+        >
+        <CBox display="flex" my="5" mx="auto">
+          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg">
+            <CHeading size="sm" mb="3"
+              >Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit.</CHeading
+            >
+            <CBox as="p">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+              quis cumque, animi pariatur dicta officiis.
+            </CBox>
+          </CBox>
+          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg"
+            ><CHeading size="sm" mb="3"
+              >Deserunt aspernatur dicta distinctio hic quia!</CHeading
+            >
+            <CBox as="p"
+              >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Praesentium quas nemo perferendis expedita odit.</CBox
+            >
+          </CBox>
+          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg"
+            ><CHeading size="sm" mb="3"
+              >Animi velit dolorum est quod facere ab possimus.</CHeading
+            ><CBox as="p"
+              >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit,
+              recusandae cumque. Nihil, quidem enim.</CBox
+            >
+          </CBox>
+          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg"
+            ><CHeading size="sm" mb="3"
+              >Lorem ipsum, dolor sit amet consectetur adipisicing
+              elit.</CHeading
+            ><CBox as="p"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+              tenetur nesciunt doloribus asperiores quisquam!</CBox
+            >
+          </CBox>
+          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg"
+            ><CHeading size="sm" mb="3"
+              >Deserunt aspernatur dicta distinctio hic quia!</CHeading
+            >
+            <CBox as="p"
+              >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Aspernatur facere quaerat cum a provident.</CBox
+            >
+          </CBox>
+          <CBox p="3" bgColor="white" shadow="md" m="2" rounded="lg"
+            ><CHeading size="sm" mb="3"
+              >Animi velit dolorum est quod facere ab possimus.</CHeading
+            ><CBox as="p"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+              nulla tenetur excepturi est eaque?</CBox
+            >
+          </CBox>
+        </CBox>
+      </CBox>
+      <CBox
+        :w="{
+          md: 'var(--sizes-containers-sm)',
+          xl: 'var(--sizes-containers-xl)',
+        }"
+        my="12"
+      >
+        <CHeading textAlign="center" mx="auto" mb="4"
+          >Our Customer Testimonials</CHeading
+        >
+        <CBox textAlign="center">
+          <CHeading size="md"
+            >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
+            alias laboriosam, nobis totam autem adipisci sed eos possimus
+            consequatur optio recusandae doloribus explicabo a ipsa maiores ut
+            harum, deleniti tenetur et assumenda amet.
+          </CHeading>
+        </CBox>
+      </CBox>
       <CModal :is-open="showModal">
         <CModalOverlay />
         <CModalContent>
