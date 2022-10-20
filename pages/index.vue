@@ -69,8 +69,8 @@
         pos="relative"
       >
         <CBox>
-          <CHeading>Welcome to COFFD ⚡️ </CHeading>
-          <CText as="p">
+          <CHeading>Welcome to Brewd </CHeading>
+          <CText as="p" my="6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             expedita earum, dolor culpa ullam ut, molestias nesciunt, atque aut
             vero voluptatem. Fugiat est deleniti natus aspernatur ipsa laborum
@@ -78,8 +78,14 @@
             nihil, totam necessitatibus velit quidem odio dolorem ad maiores
             fuga.
           </CText>
-          <CHeading mt="4" size="md"
-            ><CLink href="/dashboard">Dashboard</CLink></CHeading
+          <CHeading mt="4" size="sm"
+            ><CButton
+              variant-color="green"
+              size="lg"
+              shadow="xl"
+              borderRadius="full"
+              >Dashboard</CButton
+            ></CHeading
           >
         </CBox>
         <div
@@ -111,8 +117,8 @@
             borderWidth="12px"
             borderColor="blue.200"
             alt="NuxtCha"
-            src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80"
-            fallbackSrc="https://via.placeholder.com/150"
+            src="https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=980&h=980&q=80"
+            fallbackSrc="https://via.placeholder.com/400"
           />
         </div>
       </CBox>
@@ -189,6 +195,81 @@
         <MCardOffset />
       </CBox>
       <CBox
+        pos="relative"
+        :_before="{
+          pos: 'absolute',
+          content: '\' \'',
+          bgImg:
+            'https://images.unsplash.com/photo-1540965555-ef9a836372ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=760&h=480&q=80',
+          bgRepeat: 'no-repeat',
+          bgPosition: 'right bottom',
+          opacity: '.25',
+          w: 'full',
+          h: 'full',
+          right: '0',
+          bottom: '0',
+          zIndex: '-1',
+        }"
+        :_after="{
+          content: '\' \'',
+          bgImg: 'linear-gradient(rgba(255 255 255 / 1%), #ffffff)',
+          pos: 'absolute',
+          h: '40%',
+          w: '100%',
+          bottom: '0',
+          zIndex: '-1',
+        }"
+      >
+        <CBox
+          :w="{
+            md: 'var(--sizes-containers-sm)',
+            xl: 'var(--sizes-containers-xl)',
+          }"
+        >
+          <CHeading
+            mb="8"
+            pos="relative"
+            :_before="{
+              content: '\' \'',
+              position: 'absolute',
+              width: '10%',
+              height: '3px',
+              backgroundColor: '#836940',
+              bottom: '-12px',
+              zIndex: 1,
+            }"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </CHeading>
+          <CFlex alignItems="top" py="4">
+            <CBox w="auto" px="4">
+              <CImage
+                src="https://images.unsplash.com/photo-1587403090535-cbf88ede773a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&h=1036&q=80"
+                maxW="490"
+                shadow="lg"
+                rounded="lg"
+              />
+              <CBox as="p" my="9">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Temporibus quo nam, doloremque eaque illum laborum ullam dolorem
+                consequuntur quasi voluptates ea? Velit.
+              </CBox>
+            </CBox>
+            <CBox w="auto" px="4">
+              <CHeading size="lg">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum.
+              </CHeading>
+              <CBox as="p" my="9">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
+                quod quae, delectus neque blanditiis adipisci repellat iusto
+                deleniti non quam dignissimos similique et sapiente incidunt
+                magni? Quidem provident, nam soluta sequi quis unde.
+              </CBox>
+            </CBox>
+          </CFlex>
+        </CBox>
+      </CBox>
+      <CBox
         h="100%"
         my="24"
         w="100%"
@@ -243,7 +324,7 @@
               w="xs"
               p="3"
               bgColor="white"
-              shadow="md"
+              shadow="lg"
               m="2"
               rounded="lg"
             >
@@ -251,7 +332,11 @@
                 >Lorem ipsum, dolor sit amet consectetur adipisicing
                 elit.</CHeading
               >
-              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CImage
+                src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=1035&w=1035&q=80"
+                alt="Logo"
+                my="8"
+              />
               <CBox as="p" fontSize="sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Nesciunt quis cumque, animi pariatur dicta officiis.
@@ -265,13 +350,17 @@
               w="xs"
               p="3"
               bgColor="white"
-              shadow="md"
+              shadow="lg"
               m="2"
               rounded="lg"
               ><CHeading size="sm" mb="3" mt="3"
                 >Deserunt aspernatur dicta distinctio hic quia!</CHeading
               >
-              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CImage
+                src="https://images.unsplash.com/photo-1606791405792-1004f1718d0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=987&q=80"
+                alt="Logo"
+                my="8"
+              />
               <CBox as="p" fontSize="sm"
                 >Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 Praesentium quas nemo perferendis expedita odit.</CBox
@@ -285,13 +374,17 @@
               w="xs"
               p="3"
               bgColor="white"
-              shadow="md"
+              shadow="lg"
               m="2"
               rounded="lg"
               ><CHeading size="sm" mb="3" mt="3"
                 >Animi velit dolorum est quod facere ab possimus.</CHeading
               >
-              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CImage
+                src="https://images.unsplash.com/photo-1587734195342-39d4b9b2ff05?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&h=1035&q=80"
+                alt="Logo"
+                my="8"
+              />
               <CBox as="p" fontSize="sm"
                 >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit,
                 recusandae cumque. Nihil, quidem enim.</CBox
@@ -305,14 +398,18 @@
               w="xs"
               p="3"
               bgColor="white"
-              shadow="md"
+              shadow="lg"
               m="2"
               rounded="lg"
               ><CHeading size="sm" mb="3" mt="3"
                 >Lorem ipsum, dolor sit amet consectetur adipisicing
                 elit.</CHeading
               >
-              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CImage
+                src="https://images.unsplash.com/photo-1582726457394-afe6407d0996?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&h=1035&q=80"
+                alt="Logo"
+                my="8"
+              />
               <CBox as="p" fontSize="sm"
                 >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
                 tenetur nesciunt doloribus asperiores quisquam!</CBox
@@ -326,13 +423,17 @@
               w="xs"
               p="3"
               bgColor="white"
-              shadow="md"
+              shadow="lg"
               m="2"
               rounded="lg"
               ><CHeading size="sm" mb="3" mt="3"
                 >Deserunt aspernatur dicta distinctio hic quia!</CHeading
               >
-              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CImage
+                src="https://images.unsplash.com/photo-1587734361993-0033759da68b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&h=1036&q=80"
+                alt="Logo"
+                my="8"
+              />
               <CBox as="p" fontSize="sm"
                 >Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Aspernatur facere quaerat cum a provident.</CBox
@@ -346,13 +447,41 @@
               w="xs"
               p="3"
               bgColor="white"
-              shadow="md"
+              shadow="lg"
               m="2"
               rounded="lg"
               ><CHeading size="sm" mb="3" mt="3"
                 >Animi velit dolorum est quod facere ab possimus.</CHeading
               >
-              <CImage src="./logo.svg" alt="Logo" my="8" />
+              <CImage
+                src="https://images.unsplash.com/photo-1611691934391-5a8805e0bd1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&h=1024&q=80"
+                alt="Logo"
+                my="8"
+              />
+              <CBox as="p" fontSize="sm"
+                >Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+                nulla tenetur excepturi est eaque?</CBox
+              >
+              <CLink href="#" fontSize="sm" fontWeight="bolder"
+                >visit &raquo;</CLink
+              >
+            </CBox>
+            <CBox
+              maxW="xs"
+              w="xs"
+              p="3"
+              bgColor="white"
+              shadow="lg"
+              m="2"
+              rounded="lg"
+              ><CHeading size="sm" mb="3" mt="3"
+                >Animi velit dolorum est quod facere ab possimus.</CHeading
+              >
+              <CImage
+                src="https://images.unsplash.com/photo-1550731358-491ded4af838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=987&q=80"
+                alt="Logo"
+                my="8"
+              />
               <CBox as="p" fontSize="sm"
                 >Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
                 nulla tenetur excepturi est eaque?</CBox
@@ -397,14 +526,15 @@
     >
       <CBox :w="['100%', '50%']" align="center">
         <CImage
-          borderRadius="xl"
           shadow="xl"
-          src="./logo.svg"
+          rounded="lg"
+          src="https://images.unsplash.com/photo-1553292218-4892c2e7e1ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=987&q=80"
           alt="Brewd Logo"
+          maxH="520"
         />
       </CBox>
       <CBox :w="['100%', '50%']">
-        <CHeading size="sm">
+        <CHeading size="md">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
           delectus nemo.
         </CHeading>
@@ -413,7 +543,12 @@
           aperiam! Laborum qui dolor quae rem accusantium aliquid, facere iusto
           quia reprehenderit! Autem, ipsam eveniet. Aut harum dolores id dolore?
           Repellendus, dolore? Eveniet numquam nulla nisi, fugit omnis qui
-          facere iusto, quam enim aliquam consequuntur.
+          facere iusto, quam enim aliquam consequuntur. Lorem ipsum dolor sit
+          amet consectetur adipisicing elit. Voluptas veritatis dignissimos
+          adipisci sint facere at itaque, doloremque ducimus! Dolor porro illum
+          laborum, earum aliquam repudiandae quae saepe voluptate, eaque animi
+          corrupti veniam vel dolorum dicta est. Iste aliquam quos officia ad.
+          Corporis, adipisci consequatur!
         </CBox>
         <CButton variant-color="green" px="6" borderRadius="full" shadow="xl"
           >View</CButton
