@@ -211,6 +211,8 @@
         </CBox>
       </CBox>
       <CBox
+        mt="6"
+        mb="6"
         maxW="100%"
         :w="{
           base: 'var(--sizes-containers-xl)',
@@ -223,6 +225,8 @@
           >Our Best Seller Products</CHeading
         >
         <CBox
+          mt="6"
+          mb="6"
           display="flex"
           flexDirection="row"
           alignItems="stretch"
@@ -382,27 +386,53 @@
       </CBox>
     </CFlex>
     <CBox
+      mx="auto"
+      py="12"
+      :d="['block', 'flex']"
+      :w="{
+        md: 'var(--sizes-containers-sm)',
+        xl: 'var(--sizes-containers-xl)',
+      }"
+      alignItems="center"
+    >
+      <CBox :w="['100%', '50%']" align="center">
+        <CImage
+          borderRadius="xl"
+          shadow="xl"
+          src="./logo.svg"
+          alt="Brewd Logo"
+        />
+      </CBox>
+      <CBox :w="['100%', '50%']">
+        <CHeading size="sm">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
+          delectus nemo.
+        </CHeading>
+        <CBox as="p" my="4">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis,
+          aperiam! Laborum qui dolor quae rem accusantium aliquid, facere iusto
+          quia reprehenderit! Autem, ipsam eveniet. Aut harum dolores id dolore?
+          Repellendus, dolore? Eveniet numquam nulla nisi, fugit omnis qui
+          facere iusto, quam enim aliquam consequuntur.
+        </CBox>
+        <CButton variant-color="green" px="6" borderRadius="full" shadow="xl"
+          >View</CButton
+        >
+      </CBox>
+    </CBox>
+    <CBox
       as="footer"
       mx="auto"
       my="12"
-      pt="4"
-      pb="8"
       px="4"
+      :pt="[4, 6]"
+      :pb="[6, 12]"
       :width="{
         xl: 'var(--sizes-containers-xl)',
       }"
     >
-      <CFlex
-        v-chakra="{
-          'ul li': {
-            listStyleType: 'none',
-            marginLeft: '0rem',
-          },
-          a: {
-            fontWeight: 'bolder',
-            fontSize: 'sm',
-          },
-        }"
+      <CBox
+        :display="['inline-block', 'flex']"
         mx="auto"
         justifyContent="space-between"
         alignItems="center"
@@ -430,31 +460,51 @@
             <CButton shadow="lg">Y</CButton>
           </CBox>
         </CBox>
-        <CBox>
-          <CHeading size="sm" mb="3">About Us</CHeading>
-          <CBox>
+        <CBox
+          v-chakra="{
+            'ul li': {
+              listStyleType: 'none',
+              marginLeft: '0rem',
+            },
+            a: {
+              fontWeight: 'bolder',
+              fontSize: 'sm',
+            },
+          }"
+          :d="['flex']"
+          :w="['100%', '40%']"
+          :mt="[6, 0]"
+          justifyContent="space-between"
+          alignItems="top"
+        >
+          <CBox d="inline-block" w="full">
+            <CHeading size="sm" mb="3">About Us</CHeading>
             <ul>
-              <li><CLink href="#heading">Link No 1</CLink></li>
-              <li><CLink href="#heading">Link No 1</CLink></li>
-              <li><CLink href="#heading">Link No 1</CLink></li>
-              <li><CLink href="#heading">Link No 1</CLink></li>
-              <li><CLink href="#heading">Link No 1</CLink></li>
+              <li><CLink href="#heading">History</CLink></li>
+              <li><CLink href="#heading">Branches</CLink></li>
+              <li><CLink href="#heading">Shop</CLink></li>
+              <li><CLink href="#heading">Gallery</CLink></li>
+              <li><CLink href="#heading">Careers</CLink></li>
+              <li><CLink href="#heading">Contact Us</CLink></li>
+            </ul>
+          </CBox>
+          <CBox d="inline-block" w="full">
+            <CHeading size="sm" mb="3">Products</CHeading>
+            <ul>
+              <li><CLink href="#heading">Coffee Lattes</CLink></li>
+              <li><CLink href="#heading">Green Coffee</CLink></li>
+              <li><CLink href="#heading">Coffee Bean</CLink></li>
+              <li><CLink href="#heading">Java Coffee</CLink></li>
+              <li><CLink href="#heading">Robusta Coffee</CLink></li>
             </ul>
           </CBox>
         </CBox>
-        <CBox>
-          <CHeading size="sm" mb="3">Products</CHeading>
-          <CBox>
-            <ul>
-              <li><CLink href="#heading">Link No 2</CLink></li>
-              <li><CLink href="#heading">Link No 2</CLink></li>
-              <li><CLink href="#heading">Link No 2</CLink></li>
-              <li><CLink href="#heading">Link No 2</CLink></li>
-              <li><CLink href="#heading">Link No 2</CLink></li>
-            </ul>
-          </CBox>
-        </CBox>
-      </CFlex>
+      </CBox>
+    </CBox>
+    <CBox mt="12" mb="6" mx="auto" textAlign="center">
+      <p v-chakra fontSize="sm" color="gray.500">
+        Copyright 2022 @ Brewd Company. All Rigth Reserved.
+      </p>
     </CBox>
     <CModal :is-open="showModal">
       <CModalOverlay />
