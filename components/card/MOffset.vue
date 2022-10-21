@@ -12,7 +12,7 @@
       v-if="cards && cards.length > 0"
       justify="center"
       alignItems="top"
-      px="6"
+      :px="[3, 6]"
       :direction="['column', 'row']"
     >
       <CBox

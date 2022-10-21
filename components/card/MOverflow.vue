@@ -36,19 +36,63 @@
           display="inline-block"
           w="xs"
           p="3"
-          bgColor="white"
           shadow="lg"
           m="2"
           rounded="lg"
+          pos="relative"
+          overflow="hidden"
+          transition="0.5s ease"
+          :_hover="{
+            shadow: 'xl',
+          }"
         >
-          <CHeading size="md" mt="3">{{ item.title }}</CHeading>
-          <CImage :src="item.image" :alt="item.title" my="8" />
+          <CBox
+            pos="relative"
+            margin="-5em -5em 0 -5em"
+            :_before="{
+              content: '\' \'',
+              bgImage:
+                'linear-gradient(rgba(255 255 255 / 1%), var(--colors-gray-800))',
+              w: '100%',
+              h: '50%',
+              bottom: 0,
+              pos: 'absolute',
+              zIndex: '1',
+              transition: '0.5s ease',
+            }"
+            :_hover="{
+              ':before': {
+                h: '25%',
+                bgImage:
+                  'linear-gradient(rgba(255 255 255 / 1%), var(--colors-gray-800))',
+              },
+            }"
+          >
+            <CHeading
+              color="white"
+              fontWeight="bold"
+              bottom="0"
+              size="sm"
+              margin="5em 5em 1em 5em"
+              pos="absolute"
+              zIndex="1"
+              >{{ item.title }}</CHeading
+            >
+            <CImage
+              pos="relative"
+              zIndex="0"
+              :src="item.image"
+              :alt="item.title"
+              my="8"
+            />
+          </CBox>
           <CBox as="p" fontSize="sm" mb="4">{{ item.description }}</CBox>
           <CButton
             variant-color="green"
             borderRadius="full"
             size="sm"
-            px="5"
+            pr="5"
+            pl="4"
             shadow="lg"
             ><CIcon name="chevron-left" mr="1" /> View</CButton
           >

@@ -14,7 +14,6 @@
         :_before="{
           content: '\' \'',
           position: 'absolute',
-          top: 0,
           right: 0,
           bottom: 0,
           left: 0,
@@ -23,7 +22,9 @@
           display: 'block',
           pointerEvents: 'none',
           overflow: 'hidden',
-          // bgColor: 'rgba(0, 0, 0, 0.35)',
+          bgColor: 'rgba(0, 0, 0, 0.40)',
+          // bgImage:
+          //   'linear-gradient(rgba(255 255 255 / 1%), var(--colors-gray-900))',
         }"
       >
         <CBox
@@ -62,15 +63,20 @@
       my="12"
     >
       <CBox
-        :w="['100%', '66%']"
+        :w="[
+          'auto',
+          'var(--sizes-containers-md)',
+          'var(--sizes-containers-lg)',
+          'var(--sizes-containers-xl)',
+        ]"
         my="3"
         mx="auto"
         :d="['block', 'flex']"
         pos="relative"
       >
-        <CBox>
+        <CBox :px="[3, 6]">
           <CHeading>Welcome to Brewd </CHeading>
-          <CText as="p" my="6">
+          <CText as="p" :my="[6, 9]">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
             expedita earum, dolor culpa ullam ut, molestias nesciunt, atque aut
             vero voluptatem. Fugiat est deleniti natus aspernatur ipsa laborum
@@ -92,6 +98,7 @@
           v-chakra="{
             position: 'relative',
             mx: 'auto',
+            my: [8, 4],
             borderRadius: 'full',
             ':before, :after': {
               content: `' '`,
@@ -336,16 +343,16 @@
       }"
       alignItems="center"
     >
-      <CBox :w="['100%', '50%']" align="center">
+      <CBox :w="['100%', '50%']" align="center" :mr="[2, 4]" mb="12">
         <CImage
           shadow="xl"
-          rounded="lg"
+          :rounded="['none', 'lg']"
           src="https://images.unsplash.com/photo-1553292218-4892c2e7e1ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=987&q=80"
           alt="Brewd Logo"
           maxH="520"
         />
       </CBox>
-      <CBox :w="['100%', '50%']">
+      <CBox :w="['100%', '50%']" p="4">
         <CHeading size="md">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
           delectus nemo.
@@ -355,12 +362,14 @@
           aperiam! Laborum qui dolor quae rem accusantium aliquid, facere iusto
           quia reprehenderit! Autem, ipsam eveniet. Aut harum dolores id dolore?
           Repellendus, dolore? Eveniet numquam nulla nisi, fugit omnis qui
-          facere iusto, quam enim aliquam consequuntur. Lorem ipsum dolor sit
-          amet consectetur adipisicing elit. Voluptas veritatis dignissimos
-          adipisci sint facere at itaque, doloremque ducimus! Dolor porro illum
-          laborum, earum aliquam repudiandae quae saepe voluptate, eaque animi
-          corrupti veniam vel dolorum dicta est. Iste aliquam quos officia ad.
-          Corporis, adipisci consequatur!
+          facere iusto, quam enim aliquam consequuntur.
+        </CBox>
+        <CBox as="p" my="4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          veritatis dignissimos adipisci sint facere at itaque, doloremque
+          ducimus! Dolor porro illum laborum, earum aliquam repudiandae quae
+          saepe voluptate, eaque animi corrupti veniam vel dolorum dicta est.
+          Iste aliquam quos officia ad. Corporis, adipisci consequatur!
         </CBox>
         <CButton variant-color="green" px="6" borderRadius="full" shadow="xl"
           >View</CButton
