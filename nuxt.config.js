@@ -134,6 +134,9 @@ export default {
         CHeading: {
           color: '#836940',
         },
+        CModalOverlay: {
+          zIndex: 10,
+        },
 
         // CButton: ({ colorMode }) => ({
         //   bg: colorMode === 'light' ? 'white' : 'whiteAlpha.400',

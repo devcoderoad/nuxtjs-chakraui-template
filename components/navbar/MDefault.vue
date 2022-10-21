@@ -7,8 +7,7 @@
     bgColor="rgba(255, 255, 255, 0.75)"
     backdropFilter="saturate(180%) blur(10px)"
     shadow="sm"
-    p="3"
-    height="76"
+    p="4"
     pos="fixed"
     top="0"
     left="0"
@@ -18,41 +17,41 @@
   >
     <CFlex
       :w="{
+        base: 'var(--sizes-containers-lg)',
         sm: 'var(--sizes-containers-xl)',
         lg: 'var(--sizes-containers-xl)',
       }"
-      :display="{ base: 'flex' }"
-      flex="wrap"
+      display="flex"
       justify="center"
       mx="auto"
     >
       <CLink href="/" mr="auto">
-        <CImage :src="logo" h="34px" alt="Logo" mr="auto" ml="6" mt="1" />
+        <CImage :src="logo" h="34px" alt="Logo" mx="auto" mt="1" />
       </CLink>
       <CFlex
         v-chakra="{
           a: {
             pos: 'relative',
-            d: 'block',
+            // d: 'block',
             transition: 'all .25s ease',
             color: 'var(--colors-primary)',
             fontWeight: 'bold',
-            fontSize: ['.77rem', '.88rem'],
+            // fontSize: ['.77rem', '.88rem'],
             _before: {
               transition: 'all .25s ease',
               content: '\' \'',
-              position: 'absolute',
-              borderBottom: 0,
-              borderColor: 'blackAlpha.500',
-              bottom: 2,
-              right: 0,
-              height: 0,
-              width: '28px',
-              borderBottom: '1px',
+              // position: 'absolute',
+              // borderBottom: 0,
+              // borderColor: 'blackAlpha.500',
+              // bottom: 2,
+              // right: 0,
+              // height: 0,
+              // width: '28px',
+              // borderBottom: '1px',
             },
             _hover: {
               textDecoration: 'none',
-              color: 'blackAlpha.600',
+              color: 'blackAlpha.500',
               _before: {
                 width: 'full',
                 height: '2px',
@@ -62,7 +61,7 @@
           },
         }"
         :display="['none', 'flex']"
-        mt="0"
+        alignItems="center"
         as="nav"
       >
         <CLink :textAlign="[{ base: 'center', md: 'left' }]" :mx="[2, 3, 6]">
@@ -72,8 +71,6 @@
           <CPopoverTrigger>
             <CLink
               text-decoration="none"
-              font-weight="bold"
-              color="blue.500"
               :textAlign="[{ base: 'center', md: 'left' }]"
               :mx="[2, 3, 6]"
             >

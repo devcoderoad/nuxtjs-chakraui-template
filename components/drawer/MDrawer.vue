@@ -7,10 +7,11 @@
     :returnFocusOnClose="false"
     :onOverlayClick="onOverlayClick"
     :placement="placement"
+    zIndex="2"
   >
     <CDrawerOverlay />
-    <CDrawerContent v-chakra="{ zIndex: 3333 }" w="full">
-      <CDrawerBody style="overflow: hidden">
+    <CDrawerContent w="full">
+      <CDrawerBody overflow="hidden">
         <CBox
           h="full"
           alignItems="center"

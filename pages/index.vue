@@ -64,7 +64,7 @@
     >
       <CBox
         :w="[
-          'auto',
+          'full',
           'var(--sizes-containers-md)',
           'var(--sizes-containers-lg)',
           'var(--sizes-containers-xl)',
@@ -96,6 +96,7 @@
         </CBox>
         <div
           v-chakra="{
+            overFlow: 'hidden',
             position: 'relative',
             mx: 'auto',
             my: [8, 4],
@@ -119,8 +120,8 @@
         >
           <CImage
             borderRadius="full"
-            boxSize="400px"
-            maxWidth="400px"
+            boxSize="320"
+            maxWidth="320"
             borderWidth="12px"
             borderColor="blue.200"
             alt="NuxtCha"
