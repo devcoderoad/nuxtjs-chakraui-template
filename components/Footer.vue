@@ -88,9 +88,9 @@
           bg="transparent"
           variant="unstyled"
           mr="3"
-          :icon="colorMode === 'light' ? 'moon' : 'sun'"
+          :icon="chakraColorMode === 'light' ? 'moon' : 'sun'"
           :aria-label="`Switch to ${
-            colorMode === 'light' ? 'dark' : 'light'
+            chakraColorMode === 'light' ? 'dark' : 'light'
           } mode`"
           @click="$emit('toggleColorMode')"
         />

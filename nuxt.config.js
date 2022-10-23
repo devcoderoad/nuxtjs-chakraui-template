@@ -221,6 +221,10 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
+  router: {
+    trailingSlash: false,
+  },
+
   // Loading color
   loading: { color: '#ff0000' },
 }

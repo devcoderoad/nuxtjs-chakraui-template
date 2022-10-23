@@ -34,6 +34,8 @@ import {
   faIdCardAlt,
   faIdCardClip,
   faIdBadge,
+  faCartPlus,
+  faCartShopping,
 } from '@fortawesome/free-solid-svg-icons'
 
 export {
@@ -71,4 +73,6 @@ export {
   faIdCardAlt,
   faIdCardClip,
   faIdBadge,
+  faCartPlus,
+  faCartShopping,
 }

@@ -4,7 +4,7 @@
     <CColorModeProvider>
       <CBox as="main" role="layout" v-bind="mainStyles[colorMode]">
         <MSeoHead />
-        <MNavBarDefault />
+        <MNavBarDefault :position="navbarPos" @onScrollDown="onScrollDown" />
         <Nuxt />
         <MBackToTop />
       </CBox>
@@ -52,6 +52,7 @@ export default {
         },
         // width: ['xl'],
       },
+      navbarPos: '',
     }
   },
   head() {
@@ -65,6 +66,18 @@ export default {
   computed: {
     colorMode() {
       return this.chakraColorMode
+    },
+  },
+  beforeMount() {
+    window.addEventListener('scroll', this.onScrollDown)
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.onScrollDown)
+  },
+  methods: {
+    onScrollDown() {
+      const calcScroll = window.scrollY > 140
+      this.navbarPos = calcScroll ? 'sticky' : 'static'
     },
   },
 }

@@ -130,7 +130,9 @@
             />
             {{ item.category }}
           </a>
-          <CText as="p" :my="4" size="md">{{ item.subTitle }} </CText>
+          <CText as="p" :my="4" fontSize="sm" color="gray.400"
+            >{{ item.subTitle }}
+          </CText>
           <CHeading size="lg" textAlign="left">${{ item.price }} </CHeading>
         </CBox>
       </CFlex>
@@ -139,16 +141,18 @@
           {{ item.description }}
         </CText>
         <CButton
-          variant-color="orange"
+          variant-color="green"
           borderRadius="full"
           size="md"
           textTransform="uppercase"
           float="right"
           fontSize="sm"
           fontWeight="bolder"
-          px="6"
+          px="8"
+          py="0"
+          left-icon="cart-plus"
         >
-          Buy
+          <CText ml="1">Buy</CText>
         </CButton>
       </CStack>
     </CBox>
@@ -185,18 +189,18 @@ export default {
         {
           id: 1,
           title: 'See the Vue Brewd Caffe',
-          subTitle: 'Vue makes front-end development a breeze.',
+          subTitle: 'A mixed of roasted robusta beans with fresh milk',
           price: 10,
           description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officiis iste consectetur',
           image:
             'https://images.unsplash.com/photo-1596078841242-12f73dc697c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80',
-          category: 'Latte',
+          category: 'Capucino',
         },
         {
           id: 2,
           title: 'Brewd in the night, serve at the morning',
-          subTitle: 'Vue makes front-end development a breeze.',
+          subTitle: 'Fresh morning blend mixed',
           price: 30,
           description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officiis iste consectetur',
@@ -207,13 +211,13 @@ export default {
         {
           id: 3,
           title: 'Hrvest Morning Blend Latte',
-          subTitle: 'Vue makes front-end development a breeze.',
+          subTitle: 'Coffee bean with Hazelnut',
           price: 20,
           description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officiis iste consectetur',
           image:
             'https://images.unsplash.com/photo-1594146971821-373461fd5cd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=960&h=960&q=80',
-          category: 'Latte',
+          category: 'Hazelnut',
         },
       ],
     }

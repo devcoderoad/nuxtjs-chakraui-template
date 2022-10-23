@@ -141,7 +141,8 @@ export default {
             'https://images.unsplash.com/photo-1606791405792-1004f1718d0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=987&q=80',
         },
         {
-          title: 'Animi velit dolorum est quod facere ab possimus.',
+          title:
+            'Animi velit dolorum est quod facere ab possimus. sit amet consectetur',
           description:
             'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit, recusandae cumque. Nihil, quidem enim.',
           image:
@@ -155,14 +156,14 @@ export default {
             'https://images.unsplash.com/photo-1582726457394-afe6407d0996?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&h=1035&q=80',
         },
         {
-          title: 'Deserunt aspernatur dicta distinctio hic quia!',
+          title: 'Deserunt aspernatur dicta distinctio hic quia! elit a prov',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur facere quaerat cum a provident.',
           image:
             'https://images.unsplash.com/photo-1587734361993-0033759da68b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&h=1036&q=80',
         },
         {
-          title: 'Animi velit dolorum est quod facere ab possimus.',
+          title: 'Animi velit dolorum est quod facere ab possimus. Alias nulla',
           description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nulla tenetur excepturi est eaque?',
           image:
@@ -176,7 +177,7 @@ export default {
             'https://images.unsplash.com/photo-1550731358-491ded4af838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=987&q=80',
         },
         {
-          title: 'Lorem, ipsum dolor sit consectetur adipisicing elit.',
+          title: 'Lorem, ipsum dolor sit consectetur adipisicing elit. Quidem',
           description:
             'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, iure! Nihil provident, perferendis ducimus non vero eius quas nostrum animi incidunt architecto!',
           image:

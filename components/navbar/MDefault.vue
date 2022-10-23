@@ -1,6 +1,7 @@
 <template>
   <!-- <CFlex bg="linear-gradient(to bottom, rgb(201 201 201 / 45%), rgba(50, 55, 59, 0)) !important;" -->
   <CFlex
+    as="nav"
     alignItems="center"
     justify="center"
     mx="auto"
@@ -8,12 +9,15 @@
     backdropFilter="saturate(180%) blur(12px)"
     shadow="lg"
     p="4"
-    pos="fixed"
-    top="0"
-    left="0"
-    right="0"
-    zIndex="1"
-    @scroll="onScroll"
+    zIndex="10"
+    v-bind="{
+      pos: position,
+      top: '0',
+      left: '0',
+      right: '0',
+      transition: 'all .5s ease',
+    }"
+    @scroll="$emit('onScrollDown')"
   >
     <CFlex
       :w="{
@@ -21,7 +25,6 @@
         sm: 'var(--sizes-containers-xl)',
         lg: 'var(--sizes-containers-xl)',
       }"
-      display="flex"
       justify="center"
       mx="auto"
     >
@@ -157,7 +160,12 @@ export default {
     CLightMode,
     MDrawer,
   },
-  props: {},
+  props: {
+    position: {
+      type: String,
+      default: 'static',
+    },
+  },
   data() {
     return { logo, onMobileOpen: false, isDrawerOpen: false }
   },
@@ -165,12 +173,6 @@ export default {
     toggleDrawer() {
       const vm = this
       return (vm.isDrawerOpen = !vm.isDrawerOpen)
-    },
-    // onToggle() {
-    //   return (this.isOpenDrawer = !this.isOpenDrawer)
-    // },
-    onScroll(e) {
-      return console.log(e)
     },
   },
 }

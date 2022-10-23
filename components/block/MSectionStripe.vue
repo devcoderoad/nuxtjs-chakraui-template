@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-chakra pos="relative" overflow="hidden">
     <CBox
       :w="[
         'full',
