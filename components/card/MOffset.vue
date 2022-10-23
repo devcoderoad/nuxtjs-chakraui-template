@@ -3,6 +3,7 @@
     v-if="cards && cards.length > 0"
     justify="center"
     alignItems="top"
+    :py="[3, 8]"
     :px="[3, 6]"
     :direction="['column', 'row']"
   >
@@ -12,6 +13,7 @@
       :mx="{ base: 'auto', sm: 4, lg: 4, xl: 4 }"
       :p="[4, 6]"
       my="8"
+      pos="relative"
       shadow="xl"
       border-width="1px"
       border-radius="10"
@@ -21,8 +23,41 @@
         shadow: 'lg',
       }"
       :w="{ md: '100%', xl: '33%' }"
+      :_before="{
+        content: '\' \'',
+        pos: 'absolute',
+        top: '.5rem',
+        right: '.5rem',
+        w: '25px',
+        h: '25px',
+        bgColor: 'whiteAlpha.200',
+        border: '2px solid #cdcdcd',
+        opacity: '0.35',
+        transform: 'rotate(-40deg) translate(2px,2px)',
+        borderRadius: '50%',
+        zIndex: '0',
+      }"
     >
-      <CFlex :direction="{ md: 'column', xl: 'row' }">
+      <CFlex
+        :direction="{ md: 'column', xl: 'row' }"
+        :_before="{
+          content: '\' \'',
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          w: '80px',
+          h: '80px',
+          transform: 'rotate(-40deg) scale(1)',
+          borderRadius: '50%',
+          opacity: '0.35',
+          backgroundImage:
+            'url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAANklEQVQoU2NkIBIwEqmOgXyFU6dObQDZkp2dDaZhAMVEmCKYJLJi8hSCTCLKanwhQL6vcZkKAMbtEAuAaq67AAAAAElFTkSuQmCC)',
+          backgroundPosition: 'top center',
+          backgroundRepeat: 'repeat',
+          backgroundAttachment: 'scroll',
+          zIndex: 0,
+        }"
+      >
         <CBox
           rounded="lg"
           mt="-12"
@@ -30,6 +65,7 @@
           :width="{ md: '100%', xl: '40%' }"
           height="100%"
           shadow="xl"
+          pos="relative"
           :_after="{
             transition: 'all .3s ease',
             content: `' '`,
@@ -99,7 +135,7 @@
         </CBox>
       </CFlex>
       <CStack spacing="4" isInline my="6" justify="center" alignItems="center">
-        <CText color="gray.400" as="article">
+        <CText color="gray.400" as="article" pos="relative" zIndex="1">
           {{ item.description }}
         </CText>
         <CButton

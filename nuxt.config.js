@@ -125,7 +125,8 @@ export default {
         CDrawerCloseButton: {
           _focus: { outline: 'none' },
         },
-        CPopper: {
+        CPopover: {
+          zIndex: 10,
           borderRadius: 'sm',
           shadow: 'none',
         },

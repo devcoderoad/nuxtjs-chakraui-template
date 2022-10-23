@@ -508,9 +508,9 @@ import {
 } from '@chakra-ui/vue'
 
 /* Components */
-import MCardOffset from '@/components/card/MOffset.vue'
+import MCardOffset from '@/components/card/MOffset'
 import logo from '@/static/logo.svg'
-import MOverflow from '../components/card/MOverflow.vue'
+import MOverflow from '@/components/card/MOverflow'
 
 export default {
   name: 'IndexTwoPage',

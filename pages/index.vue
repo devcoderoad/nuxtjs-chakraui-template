@@ -62,123 +62,9 @@
       flex="wrap"
       my="12"
     >
+      <MSectionStripe />
       <CBox
-        :w="[
-          'full',
-          'var(--sizes-containers-md)',
-          'var(--sizes-containers-lg)',
-          'var(--sizes-containers-xl)',
-        ]"
-        my="3"
-        mx="auto"
-        :d="['block', 'flex']"
-        pos="relative"
-      >
-        <CBox :px="[3, 6]">
-          <CHeading>Welcome to Brewd </CHeading>
-          <CText as="p" :my="[6, 9]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-            expedita earum, dolor culpa ullam ut, molestias nesciunt, atque aut
-            vero voluptatem. Fugiat est deleniti natus aspernatur ipsa laborum
-            consectetur repudiandae delectus? Sapiente asperiores quibusdam
-            nihil, totam necessitatibus velit quidem odio dolorem ad maiores
-            fuga.
-          </CText>
-          <CHeading mt="4" size="sm"
-            ><CButton
-              variant-color="green"
-              size="lg"
-              shadow="xl"
-              borderRadius="full"
-              >Dashboard</CButton
-            ></CHeading
-          >
-        </CBox>
-        <div
-          v-chakra="{
-            overFlow: 'hidden',
-            position: 'relative',
-            mx: 'auto',
-            my: [8, 4],
-            borderRadius: 'full',
-            ':before, :after': {
-              content: `' '`,
-            },
-            ':after': {
-              bgColor: 'blue.100',
-              position: 'absolute',
-              top: '50px',
-              right: '50px',
-              bottom: '50px',
-              width: '400px',
-              height: '400px',
-              maxWidth: '400px',
-              zIndex: -1,
-              borderRadius: 'full',
-            },
-          }"
-        >
-          <CImage
-            borderRadius="full"
-            boxSize="320"
-            maxWidth="320"
-            borderWidth="12px"
-            borderColor="blue.200"
-            alt="NuxtCha"
-            src="https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=980&h=980&q=80"
-            fallbackSrc="https://via.placeholder.com/400"
-          />
-        </div>
-      </CBox>
-      <CBox my="3">
-        <CIconButton
-          mr="3"
-          :icon="colorMode === 'light' ? 'moon' : 'sun'"
-          :aria-label="`Switch to ${
-            colorMode === 'light' ? 'dark' : 'light'
-          } mode`"
-          @click="toggleColorMode"
-        />
-        <CButton left-icon="info" variant-color="blue" @click="showToast">
-          Show Toast
-        </CButton>
-      </CBox>
-      <!-- <CAvatarGroup>
-        <CAvatar
-          name="Evan You"
-          alt="Evan You"
-          src="https://pbs.twimg.com/profile_images/1206997998900850688/cTXTQiHm_400x400.jpg"
-        >
-          <CAvatarBadge size="1.0em" bg="green.500" />
-        </CAvatar>
-        <CAvatar
-          name="Jonathan Bakebwa"
-          alt="Jonathan Bakebwa"
-          src="https://res.cloudinary.com/xtellar/image/upload/v1572857445/me_zqos4e.jpg"
-        >
-          <CAvatarBadge size="1.0em" bg="green.500" />
-        </CAvatar>
-        <CAvatar
-          name="Segun Adebayo"
-          alt="Segun Adebayo"
-          src="https://pbs.twimg.com/profile_images/1169353373012897802/skPUWd6e_400x400.jpg"
-        >
-          <CAvatarBadge size="1.0em" bg="green.500" />
-        </CAvatar>
-        <CAvatar src="pop">
-          <CAvatarBadge size="1.0em" border-color="papayawhip" bg="tomato" />
-        </CAvatar>
-      </CAvatarGroup> -->
-      <CButton
-        left-icon="close"
-        variant-color="red"
-        mt="3"
-        @click="showModal = true"
-      >
-        Delete Account
-      </CButton>
-      <CBox
-        my="8"
+        :my="[6, 12]"
         py="8"
         :w="{
           md: 'var(--sizes-containers-sm)',
@@ -189,7 +75,7 @@
           size="xl"
           textAlign="center"
           pos="relative"
-          my="12"
+          my="16"
           :_before="{
             content: '\'\'',
             position: 'absolute',
@@ -234,9 +120,11 @@
             md: 'var(--sizes-containers-sm)',
             xl: 'var(--sizes-containers-xl)',
           }"
+          :my="[6, 12]"
         >
           <CHeading
             mb="8"
+            my="16"
             pos="relative"
             textAlign="center"
             :_before="{
@@ -265,13 +153,30 @@
                 shadow="lg"
                 rounded="lg"
               />
-              <CBox as="p" my="9">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <CBox
+                as="blockquote"
+                my="9"
+                fontStyle="italic"
+                fontFamily="heading"
+                fontWeight="black"
+                fontSize="lg"
+                color="gray.400"
+              >
                 Temporibus quo nam, doloremque eaque illum laborum ullam dolorem
                 consequuntur quasi voluptates ea? Velit.
+                <cite> - Lorem ipsum Dolor</cite>
               </CBox>
             </CBox>
             <CBox :width="['100%', '70%', null, '60%']" px="4">
+              <CHeading size="md">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum.
+              </CHeading>
+              <CBox as="p" my="9">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
+                quod quae, delectus neque blanditiis adipisci repellat iusto
+                deleniti non quam dignissimos similique et sapiente incidunt
+                magni? Quidem provident, nam soluta sequi quis unde.
+              </CBox>
               <CHeading size="md">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum.
               </CHeading>
@@ -305,14 +210,21 @@
         textAlign="center"
         bgImg="https://images.unsplash.com/photo-1618105965240-9aa565e73a0a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=1152&q=80"
       >
-        <CBox :w="['xl']" m="0" py="12" mx="auto">
-          <CHeading size="md" mx="auto" :my="[5, 10]" color="whiteAlpha.800"
-            >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea,
-            soluta? Quam tenetur, fugit voluptatibus dignissimos nulla ipsa cum
-            quasi enim rerum debitis? Qui provident corrupti praesentium eum ab
-            consequatur sapiente molestias, architecto natus iste sit
-            dignissimos aut? Ab provident maiores voluptate quas laboriosam
-            cupiditate ipsa.</CHeading
+        <CBox :w="['full']" m="0" py="12" mx="auto">
+          <CBox :w="['auto', '2xl']" :mx="['4', 'auto']">
+            <CText
+              fontWeight="black"
+              :fontSize="['lg', 'xl']"
+              mx="auto"
+              :my="[5, 10]"
+              color="whiteAlpha.800"
+              >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea,
+              soluta? Quam tenetur, fugit voluptatibus dignissimos nulla ipsa
+              cum quasi enim rerum debitis? Qui provident corrupti praesentium
+              eum ab consequatur sapiente molestias, architecto natus iste sit
+              dignissimos aut? Ab provident maiores voluptate quas laboriosam
+              cupiditate.</CText
+            ></CBox
           >
         </CBox>
       </CBox>
@@ -343,7 +255,7 @@
         md: 'var(--sizes-containers-sm)',
         xl: 'var(--sizes-containers-xl)',
       }"
-      alignItems="center"
+      alignItems="top"
     >
       <CBox :w="['100%', '50%']" align="center" :mr="[2, 4]" mb="12">
         <CImage
@@ -366,6 +278,10 @@
           Repellendus, dolore? Eveniet numquam nulla nisi, fugit omnis qui
           facere iusto, quam enim aliquam consequuntur.
         </CBox>
+        <CHeading size="md">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
+          delectus nemo.
+        </CHeading>
         <CBox as="p" my="4">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
           veritatis dignissimos adipisci sint facere at itaque, doloremque
@@ -378,81 +294,31 @@
         >
       </CBox>
     </CBox>
-    <MFooter />
-    <CModal :is-open="showModal">
-      <CModalOverlay />
-      <CModalContent>
-        <CModalHeader>Are you sure?</CModalHeader>
-        <CModalBody>Deleting user cannot be undone</CModalBody>
-        <CModalFooter>
-          <CButton @click="showModal = false"> Cancel </CButton>
-          <CButton
-            margin-left="3"
-            variant-color="red"
-            @click="showModal = false"
-          >
-            Delete User
-          </CButton>
-        </CModalFooter>
-        <CModalCloseButton @click="showModal = false" />
-      </CModalContent>
-    </CModal>
+    <MFooter @toggleColorMode="toggleColorMode" />
   </CBox>
 </template>
 
 <script>
-import {
-  CBox,
-  CButton,
-  // CTag,
-  // CAvatarGroup,
-  // CAvatar,
-  // CAvatarBadge,
-  CModal,
-  CModalContent,
-  CModalOverlay,
-  CModalHeader,
-  CModalFooter,
-  CModalBody,
-  CModalCloseButton,
-  CIconButton,
-  CFlex,
-  // CStack,
-  CHeading,
-  CText,
-  // CLink,
-} from '@chakra-ui/vue'
+import { CBox, CButton, CFlex, CHeading, CText } from '@chakra-ui/vue'
 
 /* Images */
 import logo from '@/static/logo.svg'
 
 /* Components */
-import MCardOffset from '@/components/card/MOffset.vue'
-import MOverflow from '../components/card/MOverflow.vue'
-import MFooter from '../components/Footer.vue'
+import MSectionStripe from '@/components/block/MSectionStripe'
+import MCardOffset from '@/components/card/MOffset'
+import MOverflow from '@/components/card/MOverflow'
+import MFooter from '@/components/Footer'
 
 export default {
   name: 'IndexPage',
   components: {
     CBox,
     CButton,
-    // CTag,
-    // CAvatarGroup,
-    // CAvatar,
-    // CAvatarBadge,
-    CModal,
-    CModalContent,
-    CModalOverlay,
-    CModalHeader,
-    CModalFooter,
-    CModalBody,
-    CModalCloseButton,
-    CIconButton,
     CFlex,
-    // CStack,
     CHeading,
     CText,
-    // CLink,
+    MSectionStripe,
     MCardOffset,
     MOverflow,
     MFooter,

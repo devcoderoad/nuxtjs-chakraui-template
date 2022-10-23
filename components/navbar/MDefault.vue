@@ -4,9 +4,9 @@
     alignItems="center"
     justify="center"
     mx="auto"
-    bgColor="rgba(255, 255, 255, 0.75)"
-    backdropFilter="saturate(180%) blur(10px)"
-    shadow="sm"
+    bgColor="rgba(255, 255, 255, 0.65)"
+    backdropFilter="saturate(180%) blur(12px)"
+    shadow="lg"
     p="4"
     pos="fixed"
     top="0"
@@ -25,7 +25,7 @@
       justify="center"
       mx="auto"
     >
-      <CLink href="/" mr="auto">
+      <CLink href="/" mr="auto" :_focus="{ outline: 'none' }">
         <CImage :src="logo" h="34px" alt="Logo" mx="auto" mt="1" />
       </CLink>
       <CFlex
@@ -88,21 +88,11 @@
             >
               <CPopoverArrow />
               <CBox p="5">
-                <CText mt="2" fontWeight="bold">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Debitis veritatis necessitatibus eius voluptatibus totam
-                  praesentium eos non inventore quidem corporis nulla tempora
-                  voluptatum sint sit dolores, minima, ab laborum odio nesciunt
-                  mollitia. Praesentium?
-                </CText>
-                <CText mt="3">
-                  Infinite Builder working on DX @Netlify. Helping people
-                  #LearnInPublic
-                </CText>
-                <CText mt="3">
-                  Infinite Builder working on DX @Netlify. Helping people
-                  #LearnInPublic
-                </CText>
+                <CText mt="3" fontWeight="bold">Coffee Lattes</CText>
+                <CText mt="3" fontWeight="bold">Green Coffee</CText>
+                <CText mt="3" fontWeight="bold">Coffee Bean</CText>
+                <CText mt="3" fontWeight="bold">Java Coffee</CText>
+                <CText mt="3" fontWeight="bold">Robusta Coffee</CText>
               </CBox>
             </CPopoverContent>
           </CLightMode>

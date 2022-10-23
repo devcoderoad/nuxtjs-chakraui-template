@@ -23,10 +23,10 @@
           <CFlex>
             <CInput size="120" my="5" shadow="lg" />
             <CButton
-              size="sm"
+              size="md"
               variant-color="green"
-              ml="2"
               shadow="lg"
+              ml="2"
               my="5"
               px="6"
               >Subscribe</CButton
@@ -84,13 +84,28 @@
     </CBox>
     <CBox mt="12" mb="6" mx="auto" textAlign="center">
       <p v-chakra fontSize="sm" color="gray.500">
+        <CIconButton
+          bg="transparent"
+          variant="unstyled"
+          mr="3"
+          :icon="colorMode === 'light' ? 'moon' : 'sun'"
+          :aria-label="`Switch to ${
+            colorMode === 'light' ? 'dark' : 'light'
+          } mode`"
+          @click="$emit('toggleColorMode')"
+        />
+      </p>
+      <p v-chakra fontSize="sm" color="gray.500">
         Copyright 2022 @ Brewd Company. All Right Reserved.
       </p>
     </CBox>
   </div>
 </template>
+
 <script>
+import { CIconButton } from '@chakra-ui/vue'
 export default {
   name: 'MFooter',
+  components: { CIconButton },
 }
 </script>
