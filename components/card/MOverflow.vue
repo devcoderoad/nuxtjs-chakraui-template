@@ -175,6 +175,13 @@ export default {
           image:
             'https://images.unsplash.com/photo-1550731358-491ded4af838?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=987&q=80',
         },
+        {
+          title: 'Lorem, ipsum dolor sit consectetur adipisicing elit.',
+          description:
+            'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, iure! Nihil provident, perferendis ducimus non vero eius quas nostrum animi incidunt architecto!',
+          image:
+            'https://images.unsplash.com/photo-1587403090535-cbf88ede773a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1036&h=1036&q=80',
+        },
       ],
     },
     link: {

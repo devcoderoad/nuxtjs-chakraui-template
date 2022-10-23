@@ -32,7 +32,7 @@ export default {
       {
         rel: 'stylesheet',
         hid: 'font-stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400;700;900&Work+Sans:wght@100;200;300;400;500;600;700;800;900&Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@100;200;300;400;700;900&Work+Sans:wght@100;200;300;400;500;600;700;800;900&Poppins:wght@100;200;300;400;500;600;700;800;900&Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap',
       },
     ],
   },
@@ -108,8 +108,10 @@ export default {
     extendTheme: {
       fonts: {
         heading: '"Poppins", sans-serif',
-        body: '"Work Sans", system-ui, sans-serif',
+        body: '"Plus Jakarta Sans", system-ui, sans-serif',
         mono: 'Menlo, monospace',
+        // heading: '"Poppins", sans-serif',
+        // body: '"Work Sans", system-ui, sans-serif',
         // font-family: 'Playfair Display', sans-serif;
         // font-family: 'Poppins', sans-serif;
       },
@@ -137,7 +139,9 @@ export default {
         CModalOverlay: {
           zIndex: 10,
         },
-
+        CDrawerContent: {
+          zIndex: -1,
+        },
         // CButton: ({ colorMode }) => ({
         //   bg: colorMode === 'light' ? 'white' : 'whiteAlpha.400',
         //   color: colorMode === 'light' ? 'gray.900' : ''

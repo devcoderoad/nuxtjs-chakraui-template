@@ -84,7 +84,7 @@
     </CBox>
     <CBox mt="12" mb="6" mx="auto" textAlign="center">
       <p v-chakra fontSize="sm" color="gray.500">
-        Copyright 2022 @ Brewd Company. All Right Reserved.aa
+        Copyright 2022 @ Brewd Company. All Right Reserved.
       </p>
     </CBox>
   </div>
