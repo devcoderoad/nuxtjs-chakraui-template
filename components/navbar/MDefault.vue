@@ -35,22 +35,12 @@
         v-chakra="{
           a: {
             pos: 'relative',
-            // d: 'block',
             transition: 'all .25s ease',
             color: 'var(--colors-primary)',
             fontWeight: 'bold',
-            // fontSize: ['.77rem', '.88rem'],
             _before: {
               transition: 'all .25s ease',
               content: '\' \'',
-              // position: 'absolute',
-              // borderBottom: 0,
-              // borderColor: 'blackAlpha.500',
-              // bottom: 2,
-              // right: 0,
-              // height: 0,
-              // width: '28px',
-              // borderBottom: '1px',
             },
             _hover: {
               textDecoration: 'none',
