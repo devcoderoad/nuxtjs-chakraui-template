@@ -42,7 +42,7 @@
             content: `' '`,
           },
           ':after': {
-            bgColor: 'blue.100',
+            bgColor: 'brown.100',
             position: 'absolute',
             top: '50px',
             right: '50px',
@@ -60,7 +60,7 @@
           boxSize="320"
           maxWidth="320"
           borderWidth="12px"
-          borderColor="blue.200"
+          borderColor="brown.600"
           alt="NuxtCha"
           src="https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=980&h=980&q=80"
           fallbackSrc="https://via.placeholder.com/400"
@@ -90,7 +90,7 @@
             content: `' '`,
           },
           ':after': {
-            bgColor: 'blue.100',
+            bgColor: 'brown.100',
             position: 'absolute',
             top: '50px',
             right: '-25px',
@@ -108,7 +108,7 @@
           boxSize="320"
           maxWidth="320"
           borderWidth="12px"
-          borderColor="blue.200"
+          borderColor="brown.600"
           alt="NuxtCha"
           src="https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=980&h=980&q=80"
           fallbackSrc="https://via.placeholder.com/400"
@@ -176,7 +176,7 @@
             content: `' '`,
           },
           ':after': {
-            bgColor: 'blue.100',
+            bgColor: 'brown.100',
             position: 'absolute',
             top: '50px',
             right: '50px',
@@ -194,7 +194,7 @@
           boxSize="320"
           maxWidth="320"
           borderWidth="12px"
-          borderColor="blue.200"
+          borderColor="brown.600"
           alt="NuxtCha"
           src="https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=980&h=980&q=80"
           fallbackSrc="https://via.placeholder.com/400"
