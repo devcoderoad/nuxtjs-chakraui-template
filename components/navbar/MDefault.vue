@@ -9,12 +9,12 @@
     backdropFilter="saturate(180%) blur(12px)"
     shadow="lg"
     p="4"
-    zIndex="10"
     v-bind="{
       pos: position,
-      top: '0',
-      left: '0',
-      right: '0',
+      top: 0,
+      left: 0,
+      right: 0,
+      zIndex: 10,
       transition: 'all .5s ease',
     }"
     @scroll="$emit('onScrollDown')"
