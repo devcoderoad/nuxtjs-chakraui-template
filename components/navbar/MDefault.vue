@@ -153,7 +153,7 @@ export default {
   props: {
     position: {
       type: String,
-      default: 'static',
+      default: 'relative',
     },
   },
   data() {
