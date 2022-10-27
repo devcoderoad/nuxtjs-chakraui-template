@@ -76,8 +76,8 @@ export default {
   },
   methods: {
     onScrollDown() {
-      const calcScroll = window.scrollY > 140
-      this.navbarPos = calcScroll ? 'sticky' : 'static'
+      const calcScroll = window.scrollY > 210
+      this.navbarPos = calcScroll ? 'sticky' : 'absolute'
     },
   },
 }

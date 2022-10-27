@@ -9,14 +9,12 @@
     backdropFilter="saturate(180%) blur(12px)"
     shadow="lg"
     p="4"
-    v-bind="{
-      pos: position,
-      top: 0,
-      left: 0,
-      right: 0,
-      zIndex: 10,
-      transition: 'all .5s ease',
-    }"
+    :pos="position"
+    top="0"
+    left="0"
+    right="0"
+    zIndex="10"
+    transition="all .5s ease"
     @scroll="$emit('onScrollDown')"
   >
     <CFlex
@@ -74,7 +72,7 @@
             <CPopoverContent
               shadow="2xl"
               zIndex="4"
-              width="400px"
+              width="180"
               color="primary"
               rounded="lg"
               :_focus="{ outline: 'none' }"
@@ -153,7 +151,7 @@ export default {
   props: {
     position: {
       type: String,
-      default: 'relative',
+      default: 'absolute',
     },
   },
   data() {
