@@ -9,7 +9,7 @@
     backdropFilter="saturate(180%) blur(12px)"
     shadow="lg"
     p="4"
-    :pos="position"
+    :position="position || 'absolute'"
     top="0"
     left="0"
     right="0"
@@ -146,6 +146,7 @@ export default {
     CLink,
     CText,
     CLightMode,
+    /* Components */
     MDrawer,
   },
   props: {
