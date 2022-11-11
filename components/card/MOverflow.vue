@@ -99,7 +99,7 @@
         </CBox>
       </CBox>
     </CBox>
-    <CHeading size="xs" mt="2" textAlign="right"
+    <CHeading size="xs" mt="2" mr="2" textAlign="right"
       ><CLink :href="link">View all products</CLink></CHeading
     >
   </CBox>

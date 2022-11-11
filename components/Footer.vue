@@ -59,7 +59,7 @@
         >
           <CBox d="inline-block" w="full">
             <CHeading size="sm" mb="3">About Us</CHeading>
-            <ul>
+            <ul v-chakra color="primary">
               <li><CLink href="#heading">History</CLink></li>
               <li><CLink href="#heading">Branches</CLink></li>
               <li><CLink href="#heading">Shop</CLink></li>
@@ -71,8 +71,10 @@
           </CBox>
           <CBox d="inline-block" w="full">
             <CHeading size="sm" mb="3">Products</CHeading>
-            <ul>
-              <li><CLink href="#heading">Coffee Lattes</CLink></li>
+            <ul v-chakra color="primary">
+              <li>
+                <CLink href="#heading">Coffee Lattes</CLink>
+              </li>
               <li><CLink href="#heading">Green Coffee</CLink></li>
               <li><CLink href="#heading">Coffee Bean</CLink></li>
               <li><CLink href="#heading">Java Coffee</CLink></li>
@@ -83,7 +85,7 @@
       </CBox>
     </CBox>
     <CBox mt="12" mb="6" mx="auto" textAlign="center">
-      <p v-chakra fontSize="sm" color="gray.500">
+      <!-- <p v-chakra fontSize="sm" color="gray.500">
         <CIconButton
           bg="transparent"
           variant="unstyled"
@@ -94,7 +96,7 @@
           } mode`"
           @click="$emit('toggleColorMode')"
         />
-      </p>
+      </p> -->
       <p v-chakra fontSize="sm" color="gray.500">
         Copyright 2022 @ Brewd Company. All Right Reserved.
       </p>
@@ -103,9 +105,9 @@
 </template>
 
 <script>
-import { CIconButton } from '@chakra-ui/vue'
+// import { CIconButton } from '@chakra-ui/vue'
 export default {
   name: 'MFooter',
-  components: { CIconButton },
+  // components: { CIconButton },
 }
 </script>

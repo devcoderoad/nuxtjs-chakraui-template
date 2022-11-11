@@ -118,6 +118,7 @@
         <CBox
           :w="{
             md: 'var(--sizes-containers-sm)',
+            lg: 'var(--sizes-containers-lg)',
             xl: 'var(--sizes-containers-xl)',
           }"
           :my="[6, 12]"
@@ -146,54 +147,58 @@
             alignItems="top"
             py="6"
           >
-            <CBox :width="['100%', '30%', null, '40%']" px="4">
+            <CBox :w="['100%', '50%']" align="center" :mr="[2, 4]" mb="12">
               <CImage
                 src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1024&h=1024&q=80"
-                maxW="100%"
-                shadow="lg"
+                mx="auto"
+                :maxW="['90%']"
+                shadow="xl"
                 rounded="lg"
               />
               <CBox
                 as="blockquote"
                 my="9"
+                mx="auto"
+                :maxW="['90%']"
                 fontStyle="italic"
                 fontFamily="heading"
                 fontWeight="black"
                 fontSize="lg"
                 color="gray.400"
               >
-                Temporibus quo nam, doloremque eaque illum laborum ullam dolorem
-                consequuntur quasi voluptates ea? Velit.
+                Organically grow the holistic world view of disruptive
+                innovation via workplace diversity and empowerment.
                 <cite> - Lorem ipsum Dolor</cite>
               </CBox>
             </CBox>
-            <CBox :width="['100%', '70%', null, '60%']" px="4">
+            <CBox :w="['100%', '50%']" p="4">
               <CHeading size="md">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum.
               </CHeading>
               <CBox as="p" my="9">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
-                quod quae, delectus neque blanditiis adipisci repellat iusto
-                deleniti non quam dignissimos similique et sapiente incidunt
-                magni? Quidem provident, nam soluta sequi quis unde.
+                Leverage agile frameworks to provide a robust synopsis for high
+                level overviews. Iterative approaches to corporate strategy
+                foster collaborative thinking to further the overall value
+                proposition. Organically grow the holistic world view of
+                disruptive innovation via workplace diversity and empowerment.
               </CBox>
               <CHeading size="md">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum.
               </CHeading>
               <CBox as="p" my="9">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
-                quod quae, delectus neque blanditiis adipisci repellat iusto
-                deleniti non quam dignissimos similique et sapiente incidunt
-                magni? Quidem provident, nam soluta sequi quis unde.
+                Efficiently unleash cross-media information without cross-media
+                value. Quickly maximize timely deliverables for real-time
+                schemas. Dramatically maintain clicks-and-mortar solutions
+                without functional solutions.
               </CBox>
               <CHeading size="md">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum.
               </CHeading>
               <CBox as="p" my="9">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima
-                quod quae, delectus neque blanditiis adipisci repellat iusto
-                deleniti non quam dignissimos similique et sapiente incidunt
-                magni? Quidem provident, nam soluta sequi quis unde.
+                Synergistically evolve 2.0 technologies rather than just in time
+                initiatives. Quickly deploy strategic networks with compelling
+                e-business. Credibly pontificate highly efficient manufactured
+                products and enabled data.
               </CBox>
             </CBox>
           </CBox>
@@ -218,12 +223,9 @@
               mx="auto"
               :my="[5, 10]"
               color="whiteAlpha.800"
-              >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea,
-              soluta? Quam tenetur, fugit voluptatibus dignissimos nulla ipsa
-              cum quasi enim rerum debitis? Qui provident corrupti praesentium
-              eum ab consequatur sapiente molestias, architecto natus iste sit
-              dignissimos aut? Ab provident maiores voluptate quas laboriosam
-              cupiditate.</CText
+              >Quickly communicate enabled technology and turnkey leadership
+              skills. Uniquely enable accurate supply chains rather than
+              frictionless technology</CText
             ></CBox
           >
         </CBox>
@@ -234,28 +236,28 @@
           md: 'var(--sizes-containers-sm)',
           xl: 'var(--sizes-containers-xl)',
         }"
-        my="12"
+        :my="[6, 12]"
       >
-        <CHeading textAlign="center" mx="auto" mb="4"
+        <CHeading textAlign="center" mx="auto" :mb="[2, 4]"
           >Our Customer Testimonials</CHeading
         >
         <CBox textAlign="center">
           <CHeading size="md"
-            >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-            alias laboriosam, nobis totam autem adipisci sed eos possimus.
+            >Objectively integrate emerging core competencies before
+            process-centric communities.
           </CHeading>
         </CBox>
       </CBox>
     </CFlex>
     <CBox
       mx="auto"
-      py="12"
+      :py="[3, 6]"
       :d="['block', 'flex']"
       :w="{
         md: 'var(--sizes-containers-sm)',
+        lg: 'var(--sizes-containers-lg)',
         xl: 'var(--sizes-containers-xl)',
       }"
-      alignItems="top"
     >
       <CBox :w="['100%', '50%']" align="center" :mr="[2, 4]" mb="12">
         <CImage
@@ -263,7 +265,8 @@
           :rounded="['none', 'lg']"
           src="https://images.unsplash.com/photo-1553292218-4892c2e7e1ae?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=987&q=80"
           alt="Brewd Logo"
-          maxH="520"
+          mx="auto"
+          :maxW="['90%']"
         />
       </CBox>
       <CBox :w="['100%', '50%']" p="4">
